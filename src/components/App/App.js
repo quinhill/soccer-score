@@ -7,6 +7,10 @@ import { fetchSchedule } from '../../thunks/fetchSchedule';
 import Header from '../Header/Header';
 
 export class App extends Component {
+  constructor() {
+    super()
+
+  }
 
   render() {
     return (
