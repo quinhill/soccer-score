@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { fetchSchedule } from '../../thunks/fetchSchedule';
 import Header from '../Header/Header';
-import Main from '../Main/Main';
-// import Team from '../Team/Team';
+import TodaysGames from '../TodaysGames/TodaysGames';
+import { Home } from '../Home/Home';
+import Team from '../Team/Team';
 
 export class App extends Component {
 
@@ -14,8 +15,12 @@ export class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route path='/' component={Main}/>
-          {/* <Route exact path='/team' component={Team}/> */}
+          <Route exact path='/' component={Home}/>
+          <Route 
+            exact path='/todaysgames' 
+            component={TodaysGames}
+          />
+          <Route exact path='/team' component={Team}/>
         </Switch>
       </div>
     );

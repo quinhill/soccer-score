@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { soccerAmericasKey } from '../../apiKeys';
 import { fetchSchedule } from '../../thunks/fetchSchedule';
-import { connect } from 'react-redux';
 import './header.css';
+import { connect } from 'react-redux';
+import { soccerAmericasKey} from '../../apiKeys';
+
 
 export const Header = (props) => {
 
@@ -15,21 +16,41 @@ export const Header = (props) => {
     return `${year}-${month}-${day}`
   }
 
-  const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
+  const handleClick = (link) => {
+    if (link === 'leagues') {
+      handleLeagueFetch()
+    } else if (link === 'games') {
+      handleScheduleFetch()
+    }
+  }
+
+  const handleLeagueFetch = () => {
+
+  }
+
+  const handleScheduleFetch = () => {
+    const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
+    props.fetchSchedule(url);
+  }
 
   return (
     <header>
       <h1 className="logo">
         soccer-scores
       </h1>
-      <button>
-        Leagues
-      </button>
-      <button
-        onClick={() => props.fetchSchedule(url)}
+      <NavLink
+        onClick={() => handleClick('leagues')}
+        to='/leagues'
       >
-        Schedule
-      </button>
+        leagues
+      </NavLink>
+      <NavLink 
+        onClick={() => handleClick('games')}
+        parrams="games"
+        to='/todaysgames'
+      >
+        today's games
+      </NavLink>
     </header>
   )
 }

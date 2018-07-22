@@ -12,7 +12,7 @@ export const fetchSchedule = (url) => {
         return response
     })
     .then(response => response.json())
-    .then(schedule => dispatch(fetchScheduleDataSuccess(schedule)))
+    .then(schedule => dispatch(fetchScheduleDataSuccess(schedule.sport_events)))
     .catch(() => dispatch(hasErrored(true)))
   }
 }

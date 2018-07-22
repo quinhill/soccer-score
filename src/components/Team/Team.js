@@ -1,11 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './team.css';
-import { fetchTeam } from '../../thunks/fetchTeam';
 
 export const Team = (props) => {
 
   return (
-    <div></div>
+    <div>
+      <h1>{props.team.name}</h1>
+    </div>
   )
 }
+
+export const mapStateToProps = (state) => ({
+  team: state.team
+})
+
+export default connect(mapStateToProps)(Team);
