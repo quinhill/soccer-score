@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { soccerAmericasKey } from '../../apiKeys';
 import { fetchSchedule } from '../../thunks/fetchSchedule';
 import { connect } from 'react-redux';
+import './header.css';
 
 export const Header = (props) => {
 
@@ -18,6 +19,9 @@ export const Header = (props) => {
 
   return (
     <header>
+      <h1 className="logo">
+        soccer-scores
+      </h1>
       <button>
         Leagues
       </button>

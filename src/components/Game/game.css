@@ -1,0 +1,10 @@
+p {
+  color: white;
+  margin: 10px;
+}
+
+.game {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+}
