@@ -16,7 +16,7 @@ export const hasErrored = (state = false, action) => {
   }
 }
 
-export const schedule = (state = {}, action) => {
+export const schedule = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SCHEDULE_SUCCESS':
       return action.schedule
