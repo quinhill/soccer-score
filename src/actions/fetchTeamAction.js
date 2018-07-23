@@ -8,7 +8,7 @@ export const hasErrored = (bool) => ({
   hasErrored: bool
 });
 
-export const fetchTeamDataSuccess = (team) => ({
+export const fetchTeamSuccess = (team) => ({
   type: 'FETCH_TEAM_SUCCESS',
   team
 })

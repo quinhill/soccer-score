@@ -11,6 +11,7 @@ export const Game = (props) => {
   return (
     <div className="game">
       <button 
+        className="button team-one"
         onClick={handleClick}
         value={props.competitors[0].id}
       >
@@ -18,6 +19,7 @@ export const Game = (props) => {
       </button>
       <p className="time">{props.scheduled}</p>
       <button 
+        className="button team-two"
         onClick={handleClick}
         value={props.competitors[1].id}
       >

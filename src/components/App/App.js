@@ -28,7 +28,6 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  liveData: state.liveData,
   isLoading: state.isLoading,
   hasErrored: state.hasErrored
 });

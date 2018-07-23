@@ -8,7 +8,7 @@ export const hasErrored = (bool) => ({
   hasErrored: bool
 });
 
-export const fetchScheduleDataSuccess = (schedule) => ({
+export const fetchScheduleSuccess = (schedule) => ({
   type: 'FETCH_SCHEDULE_SUCCESS',
   schedule
 })

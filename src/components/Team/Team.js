@@ -3,16 +3,17 @@ import { connect } from 'react-redux';
 import './team.css';
 
 export const Team = (props) => {
-
+  console.log(props.squad)
+  
   return (
     <div>
-      <h1>{props.team.name}</h1>
+      <h1>{props.squad.name}</h1>
     </div>
   )
 }
 
 export const mapStateToProps = (state) => ({
-  team: state.team
+  squad: state.team
 })
 
 export default connect(mapStateToProps)(Team);
