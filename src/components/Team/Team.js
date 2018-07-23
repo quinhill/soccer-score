@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import './team.css';
 
 export const Team = (props) => {
-  console.log(props.squad)
   
   return (
     <div>
