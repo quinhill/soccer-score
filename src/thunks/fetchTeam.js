@@ -12,7 +12,7 @@ export const fetchTeam = (url) => {
         return response
       })
       .then(response => response.json())
-      .then(Team => dispatch(action.fetchTeamDataSuccess(Team)))
+      .then(Team => dispatch(action.fetchTeamSuccess(Team)))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

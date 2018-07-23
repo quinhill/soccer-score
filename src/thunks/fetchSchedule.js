@@ -1,18 +1,18 @@
-import { isLoading, hasErrored, fetchScheduleDataSuccess } from '../actions/fetchScheduleAction';
+import * as action from '../actions/fetchScheduleAction';
 
 export const fetchSchedule = (url) => {
   return (dispatch) => {
-    dispatch(isLoading(true))
+    dispatch(action.isLoading(true))
     fetch(url)
       .then(response => {
         if (!response.ok) {
           throw Error(response.statusText)
         }
-        dispatch(isLoading(false))
+        dispatch(action.isLoading(false))
         return response
     })
     .then(response => response.json())
-    .then(schedule => dispatch(fetchScheduleDataSuccess(schedule.sport_events)))
-    .catch(() => dispatch(hasErrored(true)))
+    .then(schedule => dispatch(action.fetchScheduleSuccess(schedule.sport_events)))
+    .catch(() => dispatch(action.hasErrored(true)))
   }
 }

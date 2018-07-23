@@ -39,12 +39,14 @@ export const Header = (props) => {
         soccer-scores
       </h1>
       <NavLink
+        className="leagues-link"
         onClick={() => handleClick('leagues')}
         to='/leagues'
       >
         leagues
       </NavLink>
       <NavLink 
+        className="games-link"
         onClick={() => handleClick('games')}
         parrams="games"
         to='/todaysgames'
