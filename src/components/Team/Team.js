@@ -2,13 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './team.css';
 import PropTypes from 'prop-types';
-import { cleanTeam } from './teamCleaner';
 
 export const Team = (props) => {
-  const team = cleanTeam(props)
+
+  let players;
+  if (props.players) {
+    players = props.players.map((player, index) => {
+      console.log(player)
+      return <p key={index}>{player}</p>
+    })
+  }
+  
   return (
     <div>
-      <h1 className="team-name">{team.name}</h1>
+      <h1>{props.manager}</h1>
+      <div>
+        {players}
+      </div>
     </div>
   )
 }
@@ -18,7 +28,9 @@ Team.propTypes = {
 }
 
 export const mapStateToProps = (state) => ({
-  squad: state.squad
+  squad: state.squad,
+  manager: state.squad.managerName,
+  players: state.squad.players
 })
 
 export default connect(mapStateToProps)(Team);

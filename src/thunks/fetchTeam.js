@@ -1,4 +1,5 @@
 import * as action from '../actions/fetchTeamAction';
+import { cleanTeam } from './teamCleaner';
 
 export const fetchTeam = (url) => {
   return (dispatch) => {
@@ -12,7 +13,7 @@ export const fetchTeam = (url) => {
         return response
       })
       .then(response => response.json())
-      .then(Team => dispatch(action.fetchTeamSuccess(Team)))
+      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team))))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

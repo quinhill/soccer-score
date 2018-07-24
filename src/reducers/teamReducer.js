@@ -19,7 +19,6 @@ export const hasErrored = (state = false, action) => {
 export const squad = (state = {}, action) => {
   switch (action.type) {
     case 'FETCH_TEAM_SUCCESS':
-      console.log(action.team)
       return action.team
     default:
       return state
