@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
 import { Home } from '../Home/Home';
 import Team from '../Team/Team';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
 
@@ -25,6 +26,12 @@ export class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  isLoading: PropTypes.bool,
+  hasErrored: PropTypes.bool,
+  fetchSchedule: PropTypes.func
 }
 
 export const mapStateToProps = (state) => ({

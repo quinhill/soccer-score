@@ -1,5 +1,7 @@
 import React from 'react';
 import './game.css';
+import PropTypes from 'prop-types';
+import { timeCleaner } from './gameCleaner';
 
 export const Game = (props) => {
 
@@ -7,6 +9,8 @@ export const Game = (props) => {
     const id = event.target.value;
     props.fetchTeam(id)
   }
+
+  const time = timeCleaner(props.scheduled)
 
   return (
     <div className="game">
@@ -17,7 +21,7 @@ export const Game = (props) => {
       >
         {props.competitors[0].name}
       </button>
-      <p className="time">{props.scheduled}</p>
+      <p className="time">{time}</p>
       <button 
         className="button team-two"
         onClick={handleClick}
@@ -27,4 +31,8 @@ export const Game = (props) => {
       </button>
     </div>
   )
+}
+
+Game.propTypes = {
+  props: PropTypes.object
 }

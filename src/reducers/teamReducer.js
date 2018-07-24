@@ -16,7 +16,7 @@ export const hasErrored = (state = false, action) => {
   }
 }
 
-export const team = (state = {}, action) => {
+export const squad = (state = {}, action) => {
   switch (action.type) {
     case 'FETCH_TEAM_SUCCESS':
       console.log(action.team)

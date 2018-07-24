@@ -4,6 +4,7 @@ import { fetchSchedule } from '../../thunks/fetchSchedule';
 import './header.css';
 import { connect } from 'react-redux';
 import { soccerAmericasKey} from '../../apiKeys';
+import PropTypes from 'prop-types';
 
 
 export const Header = (props) => {
@@ -55,6 +56,10 @@ export const Header = (props) => {
       </NavLink>
     </header>
   )
+}
+
+Header.propTypes = {
+  fetchSchedule: PropTypes.func
 }
 
 export const mapDispatchToProps = (dispatch) => ({
