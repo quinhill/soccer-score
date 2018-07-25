@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { isLoading, hasErrored, schedule } from './scheduleReducer'
-import { team } from './teamReducer';
+import { squad } from './teamReducer';
 
 const rootReducer = combineReducers({
-  team,
+  squad,
   schedule,
   isLoading,
   hasErrored

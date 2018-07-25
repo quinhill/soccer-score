@@ -4,6 +4,8 @@ import { Game } from '../Game/Game';
 import { fetchTeam } from '../../thunks/fetchTeam';
 import { soccerAmericasKey } from '../../apiKeys';
 import Team from '../Team/Team';
+import PropTypes from 'prop-types';
+import './todays-games.css'
 
 export class TodaysGames extends Component {
   constructor() {
@@ -17,6 +19,7 @@ export class TodaysGames extends Component {
     const url = `https://api.sportradar.us/soccer-t3/am/en/teams/${id}/profile.json?api_key=${soccerAmericasKey}`
     this.props.fetchTeam(url)
     this.setState({team: !this.state.team})
+    this.props.history.push('/team')
   }
 
   team = () => {
@@ -36,18 +39,28 @@ export class TodaysGames extends Component {
   render() {
     if (this.state.team) {
       return (
-        <div>
-          {this.team()}
+        <div className="team">
+          <div className="display">
+            {this.team()}
+          </div>
         </div>
       )
     } else {
       return (
-        <div>
-          {this.todaysGames()}
+        <div className="todays-games">
+          <div className="display">
+            {this.todaysGames()}
+          </div>
         </div>
       )
     }
   }
+}
+
+TodaysGames.propTypes = {
+  schedule: PropTypes.array,
+  team: PropTypes.object,
+  fetchTeam: PropTypes.func
 }
 
 export const mapStateToProps = (state) => ({
