@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchSchedule } from '../../thunks/fetchSchedule';
 import './header.css';
@@ -7,9 +7,9 @@ import { soccerAmericasKey} from '../../apiKeys';
 import PropTypes from 'prop-types';
 
 
-export const Header = (props) => {
+export class Header extends Component {
 
-  const getFullDate = () => {
+  getFullDate = () => {
     const today = new Date()
     const year = today.getFullYear();
     let month = `0${today.getMonth() + 1}`;
@@ -17,52 +17,57 @@ export const Header = (props) => {
     return `${year}-${month}-${day}`
   }
 
-  const handleClick = (link) => {
+  handleClick = (link) => {
     if (link === 'leagues') {
-      handleLeagueFetch()
+      this.handleLeagueFetch()
     } else if (link === 'games') {
-      handleScheduleFetch()
+      this.handleScheduleFetch()
     }
   }
   
-  const handleLeagueFetch = () => {
+  handleLeagueFetch = () => {
     
   }
   
-  const handleScheduleFetch = () => {
-    console.log('link')
-    const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
-    props.fetchSchedule(url);
+  handleScheduleFetch = () => {
+    const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${this.getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
+    this.props.fetchSchedule(url);
   }
 
-  return (
-    <header>
-      <h1 className="logo">
-        soccer-scores
-      </h1>
-      <NavLink
-        className="leagues-link link"
-        onClick={() => handleClick('leagues')}
-        to='/leagues'
-      >
-        leagues
-      </NavLink>
-      <NavLink 
-        className="games-link link"
-        onClick={() => handleClick('games')}
-        to='/todaysgames'
-      >
-        today's games
-      </NavLink>
-      <NavLink
-        className="live-link link"
-        onClick={() => handleClick('live')}
-        to='/live'
-      >
-        live
-      </NavLink>
-    </header>
-  )
+  render() {
+    return (
+      <header>
+        <h1 className="logo">
+          soccer-scores
+        </h1>
+        <div className="nav-container">
+          <div className="nav">
+            <NavLink
+              className="leagues-link link"
+              onClick={() => this.handleClick('leagues')}
+              to='/leagues'
+            >
+              leagues
+            </NavLink>
+            <NavLink 
+              className="games-link link"
+              onClick={() => this.handleClick('games')}
+              to='/todaysgames'
+            >
+              today's games
+            </NavLink>
+            <NavLink
+              className="live-link link"
+              onClick={() => this.handleClick('live')}
+              to='/live'
+            >
+              live
+            </NavLink>
+          </div>
+        </div>
+      </header>
+    )
+  }
 }
 
 Header.propTypes = {

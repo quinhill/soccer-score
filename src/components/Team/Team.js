@@ -20,7 +20,7 @@ export const Team = (props) => {
   return (
     <div className="team-container">
       <div className="team">
-        <h1>{props.name}</h1>
+        <h1>{props.name},</h1>
         <h3>{props.country}</h3>
       </div>
       <div className="manager-stadium">
@@ -37,6 +37,7 @@ export const Team = (props) => {
         </div>
       </div>
       <div className="players">
+        <h3>squad:</h3>
         {players}
       </div>
     </div>

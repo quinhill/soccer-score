@@ -2,8 +2,14 @@ export const cleanTeam = (squad) => {
   const manager = squad.manager.name.split(',')
   const players = squad.players.map((player, index) => {
     const playerName = player.name.split(',')
+    let name;
+    if (playerName[1]) {
+      name = `${playerName[1]} ${playerName[0]}`
+    } else {
+      name = playerName;
+    }
     return {
-      name: `${playerName[1]} ${playerName[0]}`,
+      name,
       position: player.type,
       key: index
     }

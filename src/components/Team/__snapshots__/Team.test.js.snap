@@ -27,23 +27,47 @@ ShallowWrapper {
         <div
           className="team"
 >
-          <h1 />
+          <h1>
+                    ,
+          </h1>
           <h3 />
 </div>,
         <div
-          className="manager"
+          className="manager-stadium"
 >
-          <h3 />
-          <h3 />
+          <div
+                    className="manager-container"
+          >
+                    <p
+                              className="manager"
+                    >
+                              manager:
+                    </p>
+                    <h3>
+                              ,
+                    </h3>
+                    <h3 />
+          </div>
+          <div
+                    className="stadium-container"
+          >
+                    <p
+                              className="stadium"
+                    >
+                              stadium:
+                    </p>
+                    <p />
+                    <p>
+                              capacity:
+                    </p>
+                    <p />
+          </div>
 </div>,
-        <div />,
         <div
-          className="stadium"
->
-          <p />
-          <p />
-</div>,
+          className="players"
+/>,
       ],
+      "className": "team-container",
     },
     "ref": null,
     "rendered": Array [
@@ -53,7 +77,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h1 />,
+            <h1>
+              ,
+</h1>,
             <h3 />,
           ],
           "className": "team",
@@ -65,10 +91,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": Array [
+                undefined,
+                ",",
+              ],
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              undefined,
+              ",",
+            ],
             "type": "h1",
           },
           Object {
@@ -91,10 +123,35 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3 />,
-            <h3 />,
+            <div
+              className="manager-container"
+>
+              <p
+                            className="manager"
+              >
+                            manager:
+              </p>
+              <h3>
+                            ,
+              </h3>
+              <h3 />
+</div>,
+            <div
+              className="stadium-container"
+>
+              <p
+                            className="stadium"
+              >
+                            stadium:
+              </p>
+              <p />
+              <p>
+                            capacity:
+              </p>
+              <p />
+</div>,
           ],
-          "className": "manager",
+          "className": "manager-stadium",
         },
         "ref": null,
         "rendered": Array [
@@ -103,22 +160,132 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": Array [
+                <p
+                  className="manager"
+>
+                  manager:
+</p>,
+                <h3>
+                  ,
+</h3>,
+                <h3 />,
+              ],
+              "className": "manager-container",
             },
             "ref": null,
-            "rendered": null,
-            "type": "h3",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "manager:",
+                  "className": "manager",
+                },
+                "ref": null,
+                "rendered": "manager:",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    undefined,
+                    ",",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                  ",",
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h3",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": Array [
+                <p
+                  className="stadium"
+>
+                  stadium:
+</p>,
+                <p />,
+                <p>
+                  capacity:
+</p>,
+                <p />,
+              ],
+              "className": "stadium-container",
             },
             "ref": null,
-            "rendered": null,
-            "type": "h3",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "stadium:",
+                  "className": "stadium",
+                },
+                "ref": null,
+                "rendered": "stadium:",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "capacity:",
+                },
+                "ref": null,
+                "rendered": "capacity:",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
@@ -129,47 +296,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
+          "className": "players",
         },
         "ref": null,
         "rendered": null,
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p />,
-            <p />,
-          ],
-          "className": "stadium",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
-        ],
         "type": "div",
       },
     ],
@@ -185,23 +315,47 @@ ShallowWrapper {
           <div
             className="team"
 >
-            <h1 />
+            <h1>
+                        ,
+            </h1>
             <h3 />
 </div>,
           <div
-            className="manager"
+            className="manager-stadium"
 >
-            <h3 />
-            <h3 />
+            <div
+                        className="manager-container"
+            >
+                        <p
+                                    className="manager"
+                        >
+                                    manager:
+                        </p>
+                        <h3>
+                                    ,
+                        </h3>
+                        <h3 />
+            </div>
+            <div
+                        className="stadium-container"
+            >
+                        <p
+                                    className="stadium"
+                        >
+                                    stadium:
+                        </p>
+                        <p />
+                        <p>
+                                    capacity:
+                        </p>
+                        <p />
+            </div>
 </div>,
-          <div />,
           <div
-            className="stadium"
->
-            <p />
-            <p />
-</div>,
+            className="players"
+/>,
         ],
+        "className": "team-container",
       },
       "ref": null,
       "rendered": Array [
@@ -211,7 +365,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h1 />,
+              <h1>
+                ,
+</h1>,
               <h3 />,
             ],
             "className": "team",
@@ -223,10 +379,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": Array [
+                  undefined,
+                  ",",
+                ],
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Array [
+                undefined,
+                ",",
+              ],
               "type": "h1",
             },
             Object {
@@ -249,10 +411,35 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3 />,
-              <h3 />,
+              <div
+                className="manager-container"
+>
+                <p
+                                className="manager"
+                >
+                                manager:
+                </p>
+                <h3>
+                                ,
+                </h3>
+                <h3 />
+</div>,
+              <div
+                className="stadium-container"
+>
+                <p
+                                className="stadium"
+                >
+                                stadium:
+                </p>
+                <p />
+                <p>
+                                capacity:
+                </p>
+                <p />
+</div>,
             ],
-            "className": "manager",
+            "className": "manager-stadium",
           },
           "ref": null,
           "rendered": Array [
@@ -261,22 +448,132 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": Array [
+                  <p
+                    className="manager"
+>
+                    manager:
+</p>,
+                  <h3>
+                    ,
+</h3>,
+                  <h3 />,
+                ],
+                "className": "manager-container",
               },
               "ref": null,
-              "rendered": null,
-              "type": "h3",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "manager:",
+                    "className": "manager",
+                  },
+                  "ref": null,
+                  "rendered": "manager:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      undefined,
+                      ",",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                    ",",
+                  ],
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": Array [
+                  <p
+                    className="stadium"
+>
+                    stadium:
+</p>,
+                  <p />,
+                  <p>
+                    capacity:
+</p>,
+                  <p />,
+                ],
+                "className": "stadium-container",
               },
               "ref": null,
-              "rendered": null,
-              "type": "h3",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "stadium:",
+                    "className": "stadium",
+                  },
+                  "ref": null,
+                  "rendered": "stadium:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "capacity:",
+                  },
+                  "ref": null,
+                  "rendered": "capacity:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
@@ -287,47 +584,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
+            "className": "players",
           },
           "ref": null,
           "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p />,
-              <p />,
-            ],
-            "className": "stadium",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-          ],
           "type": "div",
         },
       ],

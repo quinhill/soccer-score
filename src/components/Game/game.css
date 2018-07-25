@@ -6,7 +6,12 @@ p {
 .game {
   display: grid;
   grid-template-columns: 35% 30% 35%;
-  margin: 0px;
+  margin: 0 20px 0 20px;
+  border-bottom: 1px solid white;
+}
+
+.game:last-child {
+  border: none;
 }
 
 .button {
