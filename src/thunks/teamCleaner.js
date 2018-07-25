@@ -1,7 +1,11 @@
 export const cleanTeam = (squad) => {
-  const players = squad.players.map(player => (
-    player.name
-  ))
+  const players = squad.players.map((player, index) => {
+    return {
+      name: player.name,
+      position: player.type,
+      key: index
+    }
+  })
   return {
     teamName: squad.team.name,
     managerName: squad.manager.name,

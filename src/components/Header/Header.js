@@ -24,12 +24,13 @@ export const Header = (props) => {
       handleScheduleFetch()
     }
   }
-
+  
   const handleLeagueFetch = () => {
-
+    
   }
-
+  
   const handleScheduleFetch = () => {
+    console.log('link')
     const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
     props.fetchSchedule(url);
   }
@@ -40,19 +41,25 @@ export const Header = (props) => {
         soccer-scores
       </h1>
       <NavLink
-        className="leagues-link"
+        className="leagues-link link"
         onClick={() => handleClick('leagues')}
         to='/leagues'
       >
         leagues
       </NavLink>
       <NavLink 
-        className="games-link"
+        className="games-link link"
         onClick={() => handleClick('games')}
-        parrams="games"
         to='/todaysgames'
       >
         today's games
+      </NavLink>
+      <NavLink
+        className="live-link link"
+        onClick={() => handleClick('live')}
+        to='/live'
+      >
+        live
       </NavLink>
     </header>
   )
