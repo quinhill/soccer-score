@@ -9,7 +9,7 @@ export const Team = (props) => {
   if (props.players) {
     players = props.players.map((player, index) => {
       return (
-        <div>
+        <div className="player">
           <p key={index}>{player.name}</p>
           <p>{player.position}</p>
         </div>
@@ -18,21 +18,26 @@ export const Team = (props) => {
   }
   
   return (
-    <div>
+    <div className="team-container">
       <div className="team">
         <h1>{props.name}</h1>
         <h3>{props.country}</h3>
       </div>
-      <div className="manager">
-        <h3>{props.manager}</h3>
-        <h3>{props.managerNationality}</h3>
+      <div className="manager-stadium">
+        <div className="manager-container">
+          <p className="manager">manager:</p>
+          <h3>{props.manager},</h3>
+          <h3>{props.managerNationality}</h3>
+        </div>
+        <div className="stadium-container">
+          <p className="stadium">stadium:</p>
+          <p>{props.stadiumName}</p>
+          <p>capacity:</p>
+          <p>{props.stadiumCapacity}</p>
+        </div>
       </div>
-      <div>
+      <div className="players">
         {players}
-      </div>
-      <div className="stadium">
-        <p>{props.stadiumName}</p>
-        <p>{props.stadiumCapacity}</p>
       </div>
     </div>
   )
