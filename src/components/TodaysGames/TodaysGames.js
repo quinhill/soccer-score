@@ -67,12 +67,6 @@ export class TodaysGames extends Component {
     })
   }
 
-  // todaysGames = (games) => (
-  //   games.map((game, index) => (
-  //     <Game {...game} sortTeamFetch={this.sortTeamFetch} key={index}/>
-  //   ))
-  // )
-
   render() {
     if (this.state.team) {
       return (

@@ -6,8 +6,10 @@ import { squad } from './teamReducer';
 import { liveAM } from './liveReducers/liveAMReducer';
 import { liveEU } from './liveReducers/liveEUReducer';
 import { liveAS } from './liveReducers/liveASReducer';
+import { liveScores } from './liveReducers/liveScoresReducer';
 
 const rootReducer = combineReducers({
+  liveScores,
   liveAS,
   liveEU,
   liveAM,

@@ -17,13 +17,11 @@ export class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/' component={Home}/>
           <Route 
-            exact path='/todaysgames' 
+            exact='/' 
             component={TodaysGames}
           />
           <Route exact path='/team' component={Team}/>
-          <Route exact path='/live' component={Live}/>
         </Switch>
       </div>
     );
