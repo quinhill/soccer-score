@@ -1,6 +1,6 @@
-import * as action from '../actions/fetchScheduleAction';
+import * as action from '../../actions/fetchScheduleActions/fetchScheduleAMAction';
 
-export const fetchSchedule = (url) => {
+export const fetchScheduleAM = (url) => {
   return (dispatch) => {
     dispatch(action.isLoading(true))
     fetch(url)
@@ -12,7 +12,7 @@ export const fetchSchedule = (url) => {
         return response
     })
     .then(response => response.json())
-    .then(schedule => dispatch(action.fetchScheduleSuccess(schedule.sport_events)))
+    .then(scheduleAM => dispatch(action.fetchScheduleAMSuccess(scheduleAM.sport_events)))
     .catch(() => dispatch(action.hasErrored(true)))
   }
 }

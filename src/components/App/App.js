@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { fetchSchedule } from '../../thunks/fetchSchedule';
+import { fetchScheduleAM } from '../../thunks/fetchSchedules/fetchScheduleAM';
 import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
 import { Home } from '../Home/Home';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
+import Live from '../Live/Live';
 
 export class App extends Component {
 
@@ -22,6 +23,7 @@ export class App extends Component {
             component={TodaysGames}
           />
           <Route exact path='/team' component={Team}/>
+          <Route exact path='/live' component={Live}/>
         </Switch>
       </div>
     );
@@ -40,7 +42,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchSchedule: (url) => dispatch(fetchSchedule(url))
+  fetchScheduleAM: (url) => dispatch(fetchScheduleAM(url))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

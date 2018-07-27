@@ -7,7 +7,8 @@ export const Game = (props) => {
 
   const handleClick = (event) => {
     const id = event.target.value;
-    props.fetchTeam(id)
+    const region = event.target.id;
+    props.sortTeamFetch(id, region)
   }
 
   const time = timeCleaner(props.scheduled)
@@ -18,6 +19,7 @@ export const Game = (props) => {
         className="button team-one"
         onClick={handleClick}
         value={props.competitors[0].id}
+        id={props.region}
       >
         {props.competitors[0].name}
       </button>
@@ -26,6 +28,7 @@ export const Game = (props) => {
         className="button team-two"
         onClick={handleClick}
         value={props.competitors[1].id}
+        id={props.region}
       >
         {props.competitors[1].name}
       </button>
