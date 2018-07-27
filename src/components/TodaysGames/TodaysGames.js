@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Game } from '../Game/Game';
 import { fetchTeam } from '../../thunks/fetchTeam';
-import { soccerAmericasKey } from '../../apiKeys';
+import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
 import './todays-games.css'
+import { sortLiveSchedule } from './sortLiveSchedule';
 
 export class TodaysGames extends Component {
   constructor() {
@@ -15,25 +16,55 @@ export class TodaysGames extends Component {
     }
   }
 
-  fetchTeam = (id) => {
-    const url = `https://api.sportradar.us/soccer-t3/am/en/teams/${id}/profile.json?api_key=${soccerAmericasKey}`
-    this.props.fetchTeam(url)
-    this.setState({team: !this.state.team})
-    this.props.history.push('/team')
+  sortGames = () => {
+    const games = [
+      ...this.props.scheduleAM,
+      ...this.props.scheduleAS,
+      ...this.props.scheduleEU,
+      ...this.props.liveEU,
+      ...this.props.liveAM,
+      ...this.props.liveAS,
+    ]
+    return sortLiveSchedule(games)
   }
 
-  team = () => {
-    return <Team />
+  sortTeamFetch = (id, region) => {
+    if (region === 'eu') {
+      const url = key.urlEu(id);
+      this.fetchTeam(url)
+    } else if (region === 'am') {
+      const url = key.urlAm(id);
+      this.fetchTeam(url)
+    } else if (region === 'as') {
+      const url = key.urlAs(id);
+      this.fetchASTeam(url)
+    }
+    this.sortGames()
   }
 
-  todaysGames = () => {
-    return this.props.schedule.map((event, index) => (
-        <Game 
-          {...event}
-          fetchTeam={this.fetchTeam}
-          key={index}
-        />
-      ))
+  fetchTeam = (url) => {
+    this.props.fetchTeam(url);
+    this.setState({team: !this.state.team});
+    this.props.history.push('/team');
+  }
+
+  team = () => (<Team />)
+
+  displayGames = () => {
+    const leagues = this.sortGames()
+    return Object.keys(leagues).map(league => {
+      const games = leagues[league].map(game => {
+        return (
+          <Game {...game} sortTeamFetch={this.sortTeamFetch}/>
+        )
+      })
+      return (
+        <div>
+          <h1>{league}</h1>
+          {games}
+        </div>
+      )
+    })
   }
 
   render() {
@@ -49,7 +80,7 @@ export class TodaysGames extends Component {
       return (
         <div className="todays-games">
           <div className="display">
-            {this.todaysGames()}
+            {this.displayGames()}
           </div>
         </div>
       )
@@ -64,7 +95,12 @@ TodaysGames.propTypes = {
 }
 
 export const mapStateToProps = (state) => ({
-  schedule: state.schedule,
+  scheduleAM: state.scheduleAM,
+  scheduleAS: state.scheduleAS,
+  scheduleEU: state.scheduleEU,
+  liveAM: state.liveAM,
+  liveAS: state.liveAS,
+  liveEU: state.liveEU,
   team: state.team
 });
 

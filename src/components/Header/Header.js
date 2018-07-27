@@ -1,76 +1,68 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { fetchSchedule } from '../../thunks/fetchSchedule';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { fetchScheduleAM } from '../../thunks/fetchSchedules/fetchScheduleAM';
+import { fetchScheduleAS } from '../../thunks/fetchSchedules/fetchScheduleAS';
+import { fetchScheduleEU } from '../../thunks/fetchSchedules/fetchScheduleEU';
+import { fetchLiveAM } from '../../thunks/fetchLive/fetchLiveAM';
+import { fetchLiveEU } from '../../thunks/fetchLive/fetchLiveEU';
+import { fetchLiveAS } from '../../thunks/fetchLive/fetchLiveAS';
+import { fetchLiveScores } from '../../thunks/fetchLive/fetchLiveScores';
 import './header.css';
 import { connect } from 'react-redux';
-import { soccerAmericasKey} from '../../apiKeys';
+import * as key from '../../apiKeys';
 import PropTypes from 'prop-types';
 
 
-export const Header = (props) => {
+export class Header extends Component {
 
-  const getFullDate = () => {
-    const today = new Date()
-    const year = today.getFullYear();
-    let month = `0${today.getMonth() + 1}`;
-    const day = today.getDate();
-    return `${year}-${month}-${day}`
-  }
-
-  const handleClick = (link) => {
-    if (link === 'leagues') {
-      handleLeagueFetch()
-    } else if (link === 'games') {
-      handleScheduleFetch()
-    }
+  componentDidMount() {
+    this.handleLiveFetch()
+    this.handleScheduleFetch()
   }
   
-  const handleLeagueFetch = () => {
-    
-  }
-  
-  const handleScheduleFetch = () => {
-    console.log('link')
-    const url = `https://api.sportradar.us/soccer-t3/am/en/schedules/${getFullDate()}/schedule.json?api_key=${soccerAmericasKey}`;
-    props.fetchSchedule(url);
+  handleScheduleFetch = () => {
+    this.props.fetchScheduleAM(key.urlAM());
+    this.props.fetchScheduleAS(key.urlAS());
+    this.props.fetchScheduleEU(key.urlEU());
   }
 
-  return (
-    <header>
-      <h1 className="logo">
-        soccer-scores
-      </h1>
-      <NavLink
-        className="leagues-link link"
-        onClick={() => handleClick('leagues')}
-        to='/leagues'
-      >
-        leagues
-      </NavLink>
-      <NavLink 
-        className="games-link link"
-        onClick={() => handleClick('games')}
-        to='/todaysgames'
-      >
-        today's games
-      </NavLink>
-      <NavLink
-        className="live-link link"
-        onClick={() => handleClick('live')}
-        to='/live'
-      >
-        live
-      </NavLink>
-    </header>
-  )
+  handleLiveFetch = () => {
+    // this.props.fetchLiveAM(key.urlAMstring);
+    // this.props.fetchLiveEU(key.urlEUstring);
+    // this.props.fetchLiveAS(key.urlASstring);
+    this.props.fetchLiveScores(key.liveScoresUrl);
+  }
+
+  render() {
+    return (
+      <header>
+        <Link to='/' className="logo-link">
+          <h1 className="logo">
+            soccer-scores
+          </h1>
+        </Link>
+      </header>
+    )
+  }
 }
 
 Header.propTypes = {
-  fetchSchedule: PropTypes.func
+  fetchScheduleAM: PropTypes.func,
+  fetchScheduleAS: PropTypes.func,
+  fetchScheduleEU: PropTypes.func,
+  // fetchLiveAM: PropTypes.func,
+  // fetchLiveAS: PropTypes.func,
+  // fetchLiveEU: PropTypes.func,
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchSchedule: (url) => dispatch(fetchSchedule(url))
+  fetchScheduleAM: (url) => dispatch(fetchScheduleAM(url)),
+  fetchScheduleAS: (url) => dispatch(fetchScheduleAS(url)),
+  fetchScheduleEU: (url) => dispatch(fetchScheduleEU(url)),
+  // fetchLiveAM: (url) => dispatch(fetchLiveAM(url)),
+  // fetchLiveEU: (url) => dispatch(fetchLiveEU(url)),
+  // fetchLiveAS: (url) => dispatch(fetchLiveAS(url)),
+  fetchLiveScores: (url) => dispatch(fetchLiveScores(url))
 });
 
 export default connect(null, mapDispatchToProps)(Header);

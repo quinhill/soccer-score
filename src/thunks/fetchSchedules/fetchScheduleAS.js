@@ -1,7 +1,6 @@
-import * as action from '../actions/fetchTeamAction';
-import { cleanTeam } from './cleaners/teamCleaner';
+import * as action from '../../actions/fetchScheduleActions/fetchScheduleASAction';
 
-export const fetchTeam = (url) => {
+export const fetchScheduleAS = (url) => {
   return (dispatch) => {
     dispatch(action.isLoading(true))
     fetch(url)
@@ -13,7 +12,7 @@ export const fetchTeam = (url) => {
         return response
       })
       .then(response => response.json())
-      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team))))
+      .then(scheduleAS => dispatch(action.fetchScheduleASSuccess(scheduleAS.sport_events)))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

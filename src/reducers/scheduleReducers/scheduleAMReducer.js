@@ -16,10 +16,10 @@ export const hasErrored = (state = false, action) => {
   }
 }
 
-export const schedule = (state = [], action) => {
+export const scheduleAM = (state = [], action) => {
   switch (action.type) {
-    case 'FETCH_SCHEDULE_SUCCESS':
-      return action.schedule
+    case 'FETCH_SCHEDULE_AM_SUCCESS':
+      return action.scheduleAM.map(game => ({ ...game, region: 'am' }))
     default:
       return state
   }

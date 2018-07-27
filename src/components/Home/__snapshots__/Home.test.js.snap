@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": "Welcome to soccer-scores",
+      "className": "welcome-text",
     },
     "ref": null,
     "rendered": "Welcome to soccer-scores",
@@ -30,6 +31,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Welcome to soccer-scores",
+        "className": "welcome-text",
       },
       "ref": null,
       "rendered": "Welcome to soccer-scores",

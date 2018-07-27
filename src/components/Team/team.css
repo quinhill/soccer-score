@@ -17,12 +17,13 @@
 }
 
 h1 {
-  margin: 0 20px 0 0;
+  margin: 0 5px 0 0;
   font-size: 20px;
 }
 
 h3 {
   margin: 0 5px;
+  color: white;
 }
 
 .manager-stadium {
@@ -39,10 +40,25 @@ h3 {
 
 .manager {
   margin: 0 10px;
-
 }
 
 .players {
   grid-column: 3 / 4;
   grid-row: 2 / 4;
+  width: 400px;
+  background-color: #00C5B8;
+  border-radius: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  text-align: start;
+  border-bottom: 1px solid white;
+}
+
+.player:last-child {
+  border: none;
 }
