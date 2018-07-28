@@ -18,7 +18,7 @@ export class TodaysGames extends Component {
   }
 
   sortGames = () => {
-    const games = sortLiveSchedule(this.props.liveScores)
+    // const games = sortLiveSchedule(this.props.liveScores)
     
   }
 

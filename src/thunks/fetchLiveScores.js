@@ -15,7 +15,7 @@ export const fetchLiveScores = (url) => {
       .then(response => {
         return response.json()
       })
-      .then(liveScores => dispatch(action.fetchLiveScoresSuccess(cleanLive(liveScores.data))))
+      .then(liveScores => dispatch(action.fetchLiveScoresSuccess(liveScores.data)))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }
