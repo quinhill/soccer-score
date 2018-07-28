@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { fetchScheduleAM } from '../../thunks/fetchSchedules/fetchScheduleAM';
+import { fetchLiveScores } from '../../thunks/fetchLiveScores';
 import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
-import { Home } from '../Home/Home';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
-import Live from '../Live/Live';
 
 export class App extends Component {
 
@@ -40,7 +38,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchScheduleAM: (url) => dispatch(fetchScheduleAM(url))
+  fetchLiveScores: (url) => dispatch(fetchLiveScores(url))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Game } from '../Game/Game';
 import { fetchTeam } from '../../thunks/fetchTeam';
+import { fetchLeague } from '../../thunks/fetchLeague';
 import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
@@ -18,10 +19,13 @@ export class TodaysGames extends Component {
 
   sortGames = () => {
     const games = sortLiveSchedule(this.props.liveScores)
+    this.fetchLeague(games);
   }
 
-  fetchLeague = () => {
-
+  fetchLeague = (games) => {
+    const leagueUrls = Object.keys(games).map(id => 
+      (key.getLeague(id)));
+    leagueUrls.forEach(url => this.props.fetchLeague(url))
   }
 
   fetchTeam = (url) => {
@@ -78,17 +82,12 @@ TodaysGames.propTypes = {
 
 export const mapStateToProps = (state) => ({
   liveScores: state.liveScores,
-  // scheduleAM: state.scheduleAM,
-  // scheduleAS: state.scheduleAS,
-  // scheduleEU: state.scheduleEU,
-  // liveAM: state.liveAM,
-  // liveAS: state.liveAS,
-  // liveEU: state.liveEU,
   team: state.team
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTeam: (url) => dispatch(fetchTeam(url))
+  fetchTeam: (url) => dispatch(fetchTeam(url)),
+  fetchLeague: (url) => dispatch(fetchLeague(url))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodaysGames);

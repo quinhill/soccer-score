@@ -1,22 +1,12 @@
 import { combineReducers } from 'redux';
-import { isLoading, hasErrored, scheduleAM } from './scheduleReducers/scheduleAMReducer';
-import { scheduleAS } from './scheduleReducers/scheduleASReducer';
-import { scheduleEU } from './scheduleReducers/ScheduleEUReducer';
+import { isLoading, hasErrored, liveScores } from './liveReducers/liveScoresReducer';
+import { league } from './leagueReducer';
 import { squad } from './teamReducer';
-import { liveAM } from './liveReducers/liveAMReducer';
-import { liveEU } from './liveReducers/liveEUReducer';
-import { liveAS } from './liveReducers/liveASReducer';
-import { liveScores } from './liveReducers/liveScoresReducer';
 
 const rootReducer = combineReducers({
+  league,
   liveScores,
-  // liveAS,
-  // liveEU,
-  // liveAM,
   squad,
-  // scheduleEU,
-  // scheduleAS,
-  // scheduleAM,
   isLoading,
   hasErrored
 })

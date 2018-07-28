@@ -1,5 +1,5 @@
 export const sortLiveSchedule = (games) => {
-  const sortedGames = games.reduce((leagues, game) => {
+  return games.reduce((leagues, game) => {
     if (!leagues[game.league]) {
       leagues[game.league] = [game]
     } else {
@@ -7,5 +7,4 @@ export const sortLiveSchedule = (games) => {
     }
     return leagues
   }, {})
-  console.log(sortedGames)
 }
