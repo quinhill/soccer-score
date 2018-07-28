@@ -17,29 +17,11 @@ export class TodaysGames extends Component {
   }
 
   sortGames = () => {
-    const games = [
-      ...this.props.scheduleAM,
-      ...this.props.scheduleAS,
-      ...this.props.scheduleEU,
-      ...this.props.liveEU,
-      ...this.props.liveAM,
-      ...this.props.liveAS,
-    ]
-    return sortLiveSchedule(games)
+    const games = sortLiveSchedule(this.props.liveScores)
   }
 
-  sortTeamFetch = (id, region) => {
-    if (region === 'eu') {
-      const url = key.urlEu(id);
-      this.fetchTeam(url)
-    } else if (region === 'am') {
-      const url = key.urlAm(id);
-      this.fetchTeam(url)
-    } else if (region === 'as') {
-      const url = key.urlAs(id);
-      this.fetchASTeam(url)
-    }
-    this.sortGames()
+  fetchLeague = () => {
+
   }
 
   fetchTeam = (url) => {
@@ -50,22 +32,22 @@ export class TodaysGames extends Component {
 
   team = () => (<Team />)
 
-  displayGames = () => {
-    const leagues = this.sortGames()
-    return Object.keys(leagues).map(league => {
-      const games = leagues[league].map(game => {
-        return (
-          <Game {...game} sortTeamFetch={this.sortTeamFetch}/>
-        )
-      })
-      return (
-        <div>
-          <h1>{league}</h1>
-          {games}
-        </div>
-      )
-    })
-  }
+  // displayGames = () => {
+  //   const leagues = this.sortGames()
+  //   return Object.keys(leagues).map(league => {
+  //     const games = leagues[league].map(game => {
+  //       return (
+  //         <Game {...game} sortTeamFetch={this.sortTeamFetch}/>
+  //       )
+  //     })
+  //     return (
+  //       <div>
+  //         <h1>{league}</h1>
+  //         {games}
+  //       </div>
+  //     )
+  //   })
+  // }
 
   render() {
     if (this.state.team) {
@@ -80,7 +62,7 @@ export class TodaysGames extends Component {
       return (
         <div className="todays-games">
           <div className="display">
-            {this.displayGames()}
+            {this.sortGames()}
           </div>
         </div>
       )
@@ -95,12 +77,13 @@ TodaysGames.propTypes = {
 }
 
 export const mapStateToProps = (state) => ({
-  scheduleAM: state.scheduleAM,
-  scheduleAS: state.scheduleAS,
-  scheduleEU: state.scheduleEU,
-  liveAM: state.liveAM,
-  liveAS: state.liveAS,
-  liveEU: state.liveEU,
+  liveScores: state.liveScores,
+  // scheduleAM: state.scheduleAM,
+  // scheduleAS: state.scheduleAS,
+  // scheduleEU: state.scheduleEU,
+  // liveAM: state.liveAM,
+  // liveAS: state.liveAS,
+  // liveEU: state.liveEU,
   team: state.team
 });
 

@@ -7,6 +7,7 @@ import { fetchLiveAM } from '../../thunks/fetchLive/fetchLiveAM';
 import { fetchLiveEU } from '../../thunks/fetchLive/fetchLiveEU';
 import { fetchLiveAS } from '../../thunks/fetchLive/fetchLiveAS';
 import { fetchLiveScores } from '../../thunks/fetchLive/fetchLiveScores';
+import { getFixtures } from '../../apiKeys';
 import './header.css';
 import { connect } from 'react-redux';
 import * as key from '../../apiKeys';
@@ -30,7 +31,7 @@ export class Header extends Component {
     // this.props.fetchLiveAM(key.urlAMstring);
     // this.props.fetchLiveEU(key.urlEUstring);
     // this.props.fetchLiveAS(key.urlASstring);
-    this.props.fetchLiveScores(key.liveScoresUrl);
+    this.props.fetchLiveScores(key.getFixtures);
   }
 
   render() {

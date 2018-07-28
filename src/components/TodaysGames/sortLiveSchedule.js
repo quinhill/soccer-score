@@ -1,10 +1,11 @@
 export const sortLiveSchedule = (games) => {
-  return games.reduce((leagues, game) => {
-    if (!leagues[game.tournament.name]) {
-      leagues[game.tournament.name] = [game]
+  const sortedGames = games.reduce((leagues, game) => {
+    if (!leagues[game.league]) {
+      leagues[game.league] = [game]
     } else {
-      leagues[game.tournament.name].push(game)
+      leagues[game.league].push(game)
     }
     return leagues
   }, {})
+  console.log(sortedGames)
 }

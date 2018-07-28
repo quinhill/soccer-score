@@ -10,13 +10,13 @@ import { liveScores } from './liveReducers/liveScoresReducer';
 
 const rootReducer = combineReducers({
   liveScores,
-  liveAS,
-  liveEU,
-  liveAM,
+  // liveAS,
+  // liveEU,
+  // liveAM,
   squad,
-  scheduleEU,
-  scheduleAS,
-  scheduleAM,
+  // scheduleEU,
+  // scheduleAS,
+  // scheduleAM,
   isLoading,
   hasErrored
 })
