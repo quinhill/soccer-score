@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { isLoading, hasErrored, liveScores } from './liveReducers/liveScoresReducer';
+import { isLoading, hasErrored, liveScores } from './liveScoresReducer';
 import { league } from './leagueReducer';
 import { squad } from './teamReducer';
 

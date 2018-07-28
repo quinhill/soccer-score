@@ -19,14 +19,9 @@ export class TodaysGames extends Component {
 
   sortGames = () => {
     const games = sortLiveSchedule(this.props.liveScores)
-    this.fetchLeague(games);
+    
   }
 
-  fetchLeague = (games) => {
-    const leagueUrls = Object.keys(games).map(id => 
-      (key.getLeague(id)));
-    leagueUrls.forEach(url => this.props.fetchLeague(url))
-  }
 
   fetchTeam = (url) => {
     this.props.fetchTeam(url);
@@ -35,23 +30,6 @@ export class TodaysGames extends Component {
   }
 
   team = () => (<Team />)
-
-  // displayGames = () => {
-  //   const leagues = this.sortGames()
-  //   return Object.keys(leagues).map(league => {
-  //     const games = leagues[league].map(game => {
-  //       return (
-  //         <Game {...game} sortTeamFetch={this.sortTeamFetch}/>
-  //       )
-  //     })
-  //     return (
-  //       <div>
-  //         <h1>{league}</h1>
-  //         {games}
-  //       </div>
-  //     )
-  //   })
-  // }
 
   render() {
     if (this.state.team) {

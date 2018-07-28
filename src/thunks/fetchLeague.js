@@ -14,7 +14,7 @@ export const fetchLeague = (url) => {
       .then(response => {
         return response.json()
       })
-      .then(league => dispatch(action.fetchLeagueSuccess(league.data)))
+      .then(league => dispatch(action.fetchLeagueSuccess(league.data.name)))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }
