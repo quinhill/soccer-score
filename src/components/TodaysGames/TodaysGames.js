@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Game } from '../Game/Game';
 import { fetchTeam } from '../../thunks/fetchTeam';
 import { fetchLeague } from '../../thunks/fetchLeague';
 import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
 import './todays-games.css'
-import { sortLiveSchedule } from './sortLiveSchedule';
+import { Game } from '../../components/Game/Game';
 
 export class TodaysGames extends Component {
   constructor() {
@@ -17,9 +16,21 @@ export class TodaysGames extends Component {
     }
   }
 
-  sortGames = () => {
-    // const games = sortLiveSchedule(this.props.liveScores)
-    
+  displayGames = () => {
+    const games = this.props.liveScores;
+    return Object.keys(games).map(league => {
+      const gamesDisplay = games[league].map(game => (
+        <div>
+          <Game {...game} />
+        </div>
+      ))
+      return (
+        <div>
+          <h1>{league}</h1>
+          {gamesDisplay}
+        </div>
+      )
+    })
   }
 
 
@@ -44,7 +55,7 @@ export class TodaysGames extends Component {
       return (
         <div className="todays-games">
           <div className="display">
-            {this.sortGames()}
+            {this.displayGames()}
           </div>
         </div>
       )

@@ -5,32 +5,39 @@ import { timeCleaner } from './gameCleaner';
 
 export const Game = (props) => {
 
+  const { teamHome, teamAway, teamHomeId, teamAwayId, times, scores, id } = props
+
   const handleClick = (event) => {
-    const id = event.target.value;
-    const region = event.target.id;
-    props.sortTeamFetch(id, region)
+
   }
 
-  const time = timeCleaner(props.scheduled)
+  const getGame = () => {
+
+  }
+
 
   return (
     <div className="game">
       <button 
         className="button team-one"
         onClick={handleClick}
-        value={props.competitors[0].id}
-        id={props.region}
+        value={teamHomeId}
       >
-        {props.competitors[0].name}
+        {teamHome}
       </button>
-      <p className="time">{time}</p>
+      <button 
+        className="time"
+        onClick={getGame}
+        value={id}
+      >
+        {}
+      </button>
       <button 
         className="button team-two"
         onClick={handleClick}
-        value={props.competitors[1].id}
-        id={props.region}
+        value={teamAwayId}
       >
-        {props.competitors[1].name}
+        {teamAway}
       </button>
     </div>
   )
