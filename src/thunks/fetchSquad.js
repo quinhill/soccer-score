@@ -1,5 +1,5 @@
-import * as action from '../actions/fetchTeamAction';
-import { cleanTeam } from './cleaners/teamCleaner';
+import * as action from '../actions/fetchSquadAction';
+import { cleanSquad } from './cleaners/squadCleaner';
 
 export const fetchTeam = (url) => {
   return (dispatch) => {
@@ -13,7 +13,7 @@ export const fetchTeam = (url) => {
         return response
       })
       .then(response => response.json())
-      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team.data))))
+      .then(squad => dispatch(action.fetchSquadSuccess(cleanSquad(squad.data))))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

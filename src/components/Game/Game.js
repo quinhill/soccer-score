@@ -1,6 +1,7 @@
 import React from 'react';
 import './game.css';
 import PropTypes from 'prop-types';
+import { getTeamUrl, getGameUrl } from '../../apiKeys';
 import { timeCleaner } from './gameCleaner';
 
 export const Game = (props) => {
@@ -8,11 +9,16 @@ export const Game = (props) => {
   const { teamHome, teamAway, teamHomeId, teamAwayId, times, scores, id } = props
 
   const handleClick = (event) => {
-
+    const teamId = event.target.value;
+    const teamUrl = getTeamUrl(teamId);
+    props.fetchTeam(teamUrl);
+    props.fetchSquad(squadUrl);
   }
 
-  const getGame = () => {
-
+  const getGame = (event) => {
+    const gameId = event.target.value;
+    const url = getGameUrl(gameId);
+    props.fetchGame(url)
   }
 
 

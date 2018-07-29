@@ -16,10 +16,10 @@ export const hasErrored = (state = false, action) => {
   }
 }
 
-export const team = (state = {}, action) => {
+export const squad = (state = [], action) => {
   switch (action.type) {
-    case 'FETCH_TEAM_SUCCESS':
-      return action.team
+    case 'FETCH_SQUAD_SUCCESS':
+      return [...state, action.squad]
     default:
       return state
   }

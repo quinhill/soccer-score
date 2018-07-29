@@ -18,14 +18,22 @@ export class TodaysGames extends Component {
 
   displayGames = () => {
     const games = this.props.liveScores;
-    return Object.keys(games).map(league => {
-      const gamesDisplay = games[league].map(game => (
+    return Object.keys(games).map((league, index) => {
+      const gamesDisplay = games[league].map((game, index) => (
         <div>
-          <Game {...game} />
+          <Game 
+            {...game} 
+            fetchTeam={this.fetchTeam} 
+            fetchGame={this.fetchGame}
+            key={index}
+          />
         </div>
       ))
       return (
-        <div>
+        <div
+          key={index}
+          className="league-div"
+        >
           <h1>{league}</h1>
           {gamesDisplay}
         </div>
@@ -36,8 +44,20 @@ export class TodaysGames extends Component {
 
   fetchTeam = (url) => {
     this.props.fetchTeam(url);
-    this.setState({team: !this.state.team});
+    this.setState({
+      team: !this.state.team,
+      game: !this.props.game
+    });
     this.props.history.push('/team');
+  }
+
+  fetchGame= (url) => {
+    this.props.fetchGame(url);
+    this.setState({ 
+      game: !this.state.game,
+      team: !this.state.team
+    });
+    this.props.history.push('/game');
   }
 
   team = () => (<Team />)
