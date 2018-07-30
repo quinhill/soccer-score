@@ -16,10 +16,10 @@ export const hasErrored = (state = false, action) => {
   }
 }
 
-export const liveAM = (state = [], action) => {
+export const squad = (state = [], action) => {
   switch (action.type) {
-    case 'FETCH_LIVE_AM_SUCCESS':
-      return action.liveAM
+    case 'FETCH_SQUAD_SUCCESS':
+      return action.squad
     default:
       return state
   }

@@ -13,7 +13,7 @@ export const fetchTeam = (url) => {
         return response
       })
       .then(response => response.json())
-      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team))))
+      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team.data))))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

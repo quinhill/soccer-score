@@ -1,61 +1,58 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './team.css';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 export const Team = (props) => {
-
-  let players;
-  if (props.players) {
-    players = props.players.map((player, index) => {
+  console.log(props)
+  const mappedPlayers =
+    props.squad.map(player => {
       return (
         <div className="player">
-          <p key={index}>{player.name}</p>
-          <p>{player.position}</p>
+          <p>{player.number}</p>
+          <button
+            className="player-button"
+            id={player.id}
+          >
+            {player.name}
+          </button>
         </div>
       )
     })
-  }
-  
+
   return (
     <div className="team-container">
       <div className="team">
-        <h1>{props.name},</h1>
-        <h3>{props.country}</h3>
+        <h1>{props.team.name}</h1>
+        <img src={props.team.logo} />
       </div>
       <div className="manager-stadium">
         <div className="manager-container">
           <p className="manager">manager:</p>
-          <h3>{props.manager},</h3>
-          <h3>{props.managerNationality}</h3>
+          <h3>{props.team.manager},</h3>
+          <h3>{props.team.nationality}</h3>
         </div>
         <div className="stadium-container">
           <p className="stadium">stadium:</p>
-          <p>{props.stadiumName}</p>
-          <p>capacity:</p>
-          <p>{props.stadiumCapacity}</p>
+          <p>{props.team.venue}</p>
+          <p>{props.team.capacity}</p>
         </div>
       </div>
       <div className="players">
-        <h3>squad:</h3>
-        {players}
+        <h3></h3>
+        {mappedPlayers}
       </div>
     </div>
   )
 }
 
 Team.propTypes = {
-  squad: PropTypes.object
+  squad: PropTypes.array
 }
 
-export const mapStateToProps = (state) => ({
-  name: state.squad.teamName,
-  manager: state.squad.managerName,
-  managerNationality: state.squad.managerNationality,
-  players: state.squad.players,
-  country: state.squad.country,
-  stadiumName: state.squad.stadiumName,
-  stadiumCapacity: state.squad.stadiumCapacity
+export const mapStateToProps = state => ({
+  team: state.team,
+  squad: state.squad
 })
 
-export default connect(mapStateToProps)(Team);
+export default connect(mapStateToProps)(Team)

@@ -1,36 +1,54 @@
 import React from 'react';
 import './game.css';
 import PropTypes from 'prop-types';
+import { getTeamUrl, getSquadUrl, getGameUrl } from '../../apiKeys';
 import { timeCleaner } from './gameCleaner';
 
 export const Game = (props) => {
+  
+  const { teamHome, teamAway, teamHomeId, teamAwayId, times, scores, id, seasonId } = props
 
   const handleClick = (event) => {
-    const id = event.target.value;
-    const region = event.target.id;
-    props.sortTeamFetch(id, region)
+    const teamId = event.target.value;
+    const seasonId = event.target.id;
+    const teamUrl = getTeamUrl(teamId);
+    const squadUrl = getSquadUrl(seasonId, teamId);
+    props.fetchTeam(teamUrl);
+    props.fetchSquad(squadUrl);
+    props.currentTeam(teamId);
   }
 
-  const time = timeCleaner(props.scheduled)
+  const getGame = (event) => {
+    const gameId = event.target.value;
+    const url = getGameUrl(gameId);
+    props.fetchGame(url)
+  }
+
 
   return (
     <div className="game">
       <button 
         className="button team-one"
         onClick={handleClick}
-        value={props.competitors[0].id}
-        id={props.region}
+        value={teamHomeId}
+        id={seasonId}
       >
-        {props.competitors[0].name}
+        {teamHome}
       </button>
-      <p className="time">{time}</p>
+      <button 
+        className="time"
+        onClick={getGame}
+        value={id}
+      >
+        {}
+      </button>
       <button 
         className="button team-two"
         onClick={handleClick}
-        value={props.competitors[1].id}
-        id={props.region}
+        value={teamAwayId}
+        id={seasonId}
       >
-        {props.competitors[1].name}
+        {teamAway}
       </button>
     </div>
   )

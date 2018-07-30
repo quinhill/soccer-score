@@ -8,7 +8,7 @@ export const hasErrored = (bool) => ({
   hasErrored: bool
 });
 
-export const fetchScheduleAMSuccess = (scheduleAM) => ({
-  type: 'FETCH_SCHEDULE_AM_SUCCESS',
-  scheduleAM
+export const fetchLeagueSuccess = (league) => ({
+  type: 'FETCH_LEAGUE_SUCCESS',
+  league
 })

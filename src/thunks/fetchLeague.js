@@ -1,7 +1,6 @@
-import * as action from '../../actions/fetchLiveActions/fetchLiveAMAction';
-import { cleanLive } from '../cleaners/liveCleaner';
+import * as action from '../actions/fetchLeagueAction';
 
-export const fetchLiveAM = (url) => {
+export const fetchLeague = (url) => {
   return (dispatch) => {
     dispatch(action.isLoading(true))
     fetch(url)
@@ -13,9 +12,9 @@ export const fetchLiveAM = (url) => {
         return response
       })
       .then(response => {
-        console.log(response.json())
-        return response.json()})
-      .then(liveAM => dispatch(action.fetchLiveAMSuccess(liveAM)))
+        return response.json()
+      })
+      .then(league => dispatch(action.fetchLeagueSuccess(league.data.name)))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }

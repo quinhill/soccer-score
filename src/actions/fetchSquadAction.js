@@ -8,7 +8,7 @@ export const hasErrored = (bool) => ({
   hasErrored: bool
 });
 
-export const fetchLiveASSuccess = (liveAS) => ({
-  type: 'FETCH_LIVE_AS_SUCCESS',
-  liveAS
+export const fetchSquadSuccess = (squad) => ({
+  type: 'FETCH_SQUAD_SUCCESS',
+  squad
 })

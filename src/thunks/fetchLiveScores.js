@@ -1,6 +1,7 @@
-import * as action from '../../actions/fetchScheduleActions/fetchScheduleEUActions';
+import * as action from '../actions/fetchLiveScoresAction';
+import { cleanLive } from './cleaners/liveCleaner';
 
-export const fetchScheduleEU = (url) => {
+export const fetchLiveScores = (url) => {
   return (dispatch) => {
     dispatch(action.isLoading(true))
     fetch(url)
@@ -11,8 +12,10 @@ export const fetchScheduleEU = (url) => {
         dispatch(action.isLoading(false))
         return response
       })
-      .then(response => response.json())
-      .then(scheduleEU => dispatch(action.fetchScheduleEUSuccess(scheduleEU.sport_events)))
+      .then(response => {
+        return response.json()
+      })
+      .then(liveScores => dispatch(action.fetchLiveScoresSuccess(cleanLive(liveScores.data))))
       .catch(() => dispatch(action.hasErrored(true)))
   }
 }
