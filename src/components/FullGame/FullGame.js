@@ -12,7 +12,20 @@ export const FullGame = (props) => {
       const sortedEvents = events.sort(function(a, b) {
         return a.minute - b.minute
       })
+      return mapEvents(sortedEvents)
     }
+  }
+
+  const mapEvents = (events) => {
+    console.log(events)
+    return events.map(event => {
+      return (
+        <div className="event">
+          <p>{event.player_name}</p>
+          <img src={`/${event.type}.png`} />
+        </div>
+      )
+    })
   }
 
   return (
