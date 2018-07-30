@@ -5,7 +5,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { fetchLiveScores } from '../../thunks/fetchLiveScores';
 import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
-import Team from '../Team/Team';
+import { Team } from '../Team/Team';
 import PropTypes from 'prop-types';
 
 export class App extends Component {
@@ -16,7 +16,7 @@ export class App extends Component {
         <Header />
         <Switch>
           <Route 
-            exact='/' 
+            path='/' 
             component={TodaysGames}
           />
           <Route exact path='/team' component={Team}/>

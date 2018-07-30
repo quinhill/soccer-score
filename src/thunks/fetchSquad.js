@@ -1,7 +1,7 @@
 import * as action from '../actions/fetchSquadAction';
 import { cleanSquad } from './cleaners/squadCleaner';
 
-export const fetchTeam = (url) => {
+export const fetchSquad = (url) => {
   return (dispatch) => {
     dispatch(action.isLoading(true))
     fetch(url)
@@ -12,7 +12,9 @@ export const fetchTeam = (url) => {
         dispatch(action.isLoading(false))
         return response
       })
-      .then(response => response.json())
+      .then(response => {
+        return response.json()
+      })
       .then(squad => dispatch(action.fetchSquadSuccess(cleanSquad(squad.data))))
       .catch(() => dispatch(action.hasErrored(true)))
   }

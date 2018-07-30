@@ -19,7 +19,7 @@ export const hasErrored = (state = false, action) => {
 export const squad = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SQUAD_SUCCESS':
-      return [...state, action.squad]
+      return action.squad
     default:
       return state
   }

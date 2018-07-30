@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTeam } from '../../thunks/fetchTeam';
 import { fetchLeague } from '../../thunks/fetchLeague';
+import { fetchSquad } from '../../thunks/fetchSquad';
 import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
 import './todays-games.css'
 import { Game } from '../../components/Game/Game';
+import { currentTeam } from '../../actions/currentTeamAction';
 
 export class TodaysGames extends Component {
   constructor() {
     super()
     this.state = {
-      team: false
+      team: false,
+      game: false,
     }
   }
 
@@ -23,8 +26,10 @@ export class TodaysGames extends Component {
         <div>
           <Game 
             {...game} 
-            fetchTeam={this.fetchTeam} 
+            fetchTeam={this.fetchTeam}
+            fetchSquad={this.fetchSquad} 
             fetchGame={this.fetchGame}
+            currentTeam={this.currentTeam}
             key={index}
           />
         </div>
@@ -45,19 +50,22 @@ export class TodaysGames extends Component {
   fetchTeam = (url) => {
     this.props.fetchTeam(url);
     this.setState({
-      team: !this.state.team,
-      game: !this.props.game
+      team: true,
     });
     this.props.history.push('/team');
   }
 
+  fetchSquad = (url) => {
+    this.props.fetchSquad(url);
+  }
+
   fetchGame= (url) => {
     this.props.fetchGame(url);
-    this.setState({ 
-      game: !this.state.game,
-      team: !this.state.team
-    });
     this.props.history.push('/game');
+  }
+
+  currentTeam = (id) => {
+    this.props.currentTeam(id)
   }
 
   team = () => (<Team />)
@@ -91,12 +99,16 @@ TodaysGames.propTypes = {
 
 export const mapStateToProps = (state) => ({
   liveScores: state.liveScores,
-  team: state.team
+  id: state.currentTeam,
+  team: state.team[state.currentTeam],
+  squad: state.squad[state.currentTeam]
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchTeam: (url) => dispatch(fetchTeam(url)),
-  fetchLeague: (url) => dispatch(fetchLeague(url))
+  fetchSquad: (url) => dispatch(fetchSquad(url)),
+  fetchLeague: (url) => dispatch(fetchLeague(url)),
+  currentTeam: (id) => dispatch(currentTeam(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodaysGames);

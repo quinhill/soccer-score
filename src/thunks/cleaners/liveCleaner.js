@@ -8,7 +8,8 @@ export const cleanLive = (gamesData) => {
       league: game.league.data.name,
       times: game.time,
       scores: game.scores,
-      id: game.id
+      id: game.id,
+      seasonId: game.season_id
     }
   })
   return sortToLeagues(cleanedGames)
