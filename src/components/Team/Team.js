@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 export const Team = (props) => {
-  console.log(props)
   const mappedPlayers =
     props.squad.map(player => {
       return (
@@ -47,7 +46,8 @@ export const Team = (props) => {
 }
 
 Team.propTypes = {
-  squad: PropTypes.array
+  squad: PropTypes.array,
+  team: PropTypes.object
 }
 
 export const mapStateToProps = state => ({

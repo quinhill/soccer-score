@@ -1,57 +1,82 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './game.css';
 import PropTypes from 'prop-types';
 import { getTeamUrl, getSquadUrl, getGameUrl } from '../../apiKeys';
-import { timeCleaner } from './gameCleaner';
+import { cleanTime } from './timeCleaner';
 
-export const Game = (props) => {
-  
-  const { teamHome, teamAway, teamHomeId, teamAwayId, times, scores, id, seasonId } = props
+export class Game extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-  const handleClick = (event) => {
+  handleClick = (event) => {
     const teamId = event.target.value;
     const seasonId = event.target.id;
     const teamUrl = getTeamUrl(teamId);
     const squadUrl = getSquadUrl(seasonId, teamId);
-    props.fetchTeam(teamUrl);
-    props.fetchSquad(squadUrl);
-    props.currentTeam(teamId);
+    this.props.fetchTeam(teamUrl);
+    this.props.fetchSquad(squadUrl);
+    this.props.currentTeam(teamId);
   }
 
-  const getGame = (event) => {
-    const gameId = event.target.value;
+  getGame = (event) => {
+    const gameId = event.target.id;
     const url = getGameUrl(gameId);
-    props.fetchGame(url)
+    this.props.fetchGame(url)
   }
 
+  displayDetails = () => {
+    const { times, scores } = this.props;
+    if (times.status === 'FT' || 'LIVE') {
+      return (
+        <button
+          className="details-button"
+          onClick={this.getGame}
+          id={this.props.id}
+        >
+          {`${scores.localteam_score}-${scores.visitorteam_score}`}
+        </button>
+      )
+    } else if (!times.minute) {
+      return (
+        <button
+          className="details-button"
+          onClick={this.getGame}
+          id={this.props.id}
+        >
+          {cleanTime(times.starting_at.time)}
+        </button>
+      )
+    } else {
+      return (
+        <p>No details available</p>
+      )
+    }
+  }
 
-  return (
-    <div className="game">
-      <button 
-        className="button team-one"
-        onClick={handleClick}
-        value={teamHomeId}
-        id={seasonId}
-      >
-        {teamHome}
-      </button>
-      <button 
-        className="time"
-        onClick={getGame}
-        value={id}
-      >
-        {}
-      </button>
-      <button 
-        className="button team-two"
-        onClick={handleClick}
-        value={teamAwayId}
-        id={seasonId}
-      >
-        {teamAway}
-      </button>
-    </div>
-  )
+  render() {
+    return (
+      <div className="game">
+        <button 
+          className="button team-one"
+          onClick={this.handleClick}
+          value={this.props.teamHomeId}
+          id={this.props.seasonId}
+        >
+          {this.props.teamHome}
+        </button>
+        {this.displayDetails()}
+        <button 
+          className="button team-two"
+          onClick={this.handleClick}
+          value={this.props.teamAwayId}
+          id={this.props.seasonId}
+        >
+          {this.props.teamAway}
+        </button>
+      </div>
+    )
+  }
 }
 
 Game.propTypes = {

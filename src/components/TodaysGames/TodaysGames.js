@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { fetchTeam } from '../../thunks/fetchTeam';
 import { fetchLeague } from '../../thunks/fetchLeague';
 import { fetchSquad } from '../../thunks/fetchSquad';
-import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
 import './todays-games.css'
 import { Game } from '../../components/Game/Game';
-import { currentTeam } from '../../actions/currentTeamAction';
+import { fetchGame } from '../../thunks/fetchGame';
+import FullGame from '../../components/FullGame/FullGame';
 
 export class TodaysGames extends Component {
   constructor() {
@@ -62,10 +62,10 @@ export class TodaysGames extends Component {
   fetchGame= (url) => {
     this.props.fetchGame(url);
     this.props.history.push('/game');
-  }
-
-  currentTeam = (id) => {
-    this.props.currentTeam(id)
+    this.setState({
+      game: true,
+      team: false
+    })
   }
 
   team = () => (<Team />)
@@ -77,6 +77,12 @@ export class TodaysGames extends Component {
           <div className="display">
             {this.team()}
           </div>
+        </div>
+      )
+    } else if (this.state.game) {
+      return (
+        <div>
+          <FullGame />
         </div>
       )
     } else {
@@ -100,15 +106,16 @@ TodaysGames.propTypes = {
 export const mapStateToProps = (state) => ({
   liveScores: state.liveScores,
   id: state.currentTeam,
-  team: state.team[state.currentTeam],
-  squad: state.squad[state.currentTeam]
+  team: state.team,
+  squad: state.squad,
+  game: state.game
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchTeam: (url) => dispatch(fetchTeam(url)),
   fetchSquad: (url) => dispatch(fetchSquad(url)),
   fetchLeague: (url) => dispatch(fetchLeague(url)),
-  currentTeam: (id) => dispatch(currentTeam(id))
+  fetchGame: (url) => dispatch(fetchGame(url))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodaysGames);
