@@ -9,6 +9,8 @@ import './todays-games.css'
 import { Game } from '../../components/Game/Game';
 import { fetchGame } from '../../thunks/fetchGame';
 import FullGame from '../../components/FullGame/FullGame';
+import { setDisplay } from '../../actions/setDisplayAction';
+import Player from '../Player/Player';
 
 export class TodaysGames extends Component {
   constructor() {
@@ -24,7 +26,12 @@ export class TodaysGames extends Component {
     return Object.keys(games).map((league, index) => {
       const gamesDisplay = games[league].map((game, index) => (
         <div>
-          <Game />
+          <Game 
+            {...game}
+            fetchTeam={this.fetchTeam}
+            fetchSquad={this.fetchSquad}
+            fetchGame={this.fetchGame}
+          />
         </div>
       ))
       return (
@@ -42,9 +49,7 @@ export class TodaysGames extends Component {
 
   fetchTeam = (url) => {
     this.props.fetchTeam(url);
-    this.setState({
-      team: true,
-    });
+    this.props.setDisplay('team')
     this.props.history.push('/team');
   }
 
@@ -55,16 +60,13 @@ export class TodaysGames extends Component {
   fetchGame= (url) => {
     this.props.fetchGame(url);
     this.props.history.push('/game');
-    this.setState({
-      game: true,
-      team: false
-    })
+    this.props.setDisplay('game')
   }
 
   team = () => (<Team />)
 
   render() {
-    if (this.state.team) {
+    if (this.props.display === 'team') {
       return (
         <div className="team">
           <div className="display">
@@ -72,10 +74,16 @@ export class TodaysGames extends Component {
           </div>
         </div>
       )
-    } else if (this.state.game) {
+    } else if (this.props.display === 'game') {
       return (
         <div>
           <FullGame />
+        </div>
+      )
+    } else if (this.props.display === 'player') {
+      return (
+        <div>
+          <Player />
         </div>
       )
     } else {
@@ -101,14 +109,16 @@ export const mapStateToProps = (state) => ({
   id: state.currentTeam,
   team: state.team,
   squad: state.squad,
-  game: state.game
+  game: state.game,
+  display: state.display
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchTeam: (url) => dispatch(fetchTeam(url)),
   fetchSquad: (url) => dispatch(fetchSquad(url)),
   fetchLeague: (url) => dispatch(fetchLeague(url)),
-  fetchGame: (url) => dispatch(fetchGame(url))
+  fetchGame: (url) => dispatch(fetchGame(url)),
+  setDisplay: (clicked) => dispatch(setDisplay(clicked))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodaysGames);

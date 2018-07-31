@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getPlayerUrl } from '../../apiKeys';
 import { fetchPlayer } from '../../thunks/fetchPlayer'
 import { Link } from 'react-router-dom';
+import { setDisplay } from '../../actions/setDisplayAction';
 
 export class Team extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export class Team extends Component {
   getPlayer = (id) => {
     const url = getPlayerUrl(id)
     this.props.fetchPlayer(url)
-    this.setState({player: true})
+    this.props.setDisplay('player')
   }
 
   mappedPlayers = () => {
@@ -76,7 +77,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  fetchPlayer: (url) => dispatch(fetchPlayer(url))
+  fetchPlayer: (url) => dispatch(fetchPlayer(url)),
+  setDisplay: (clicked) => dispatch(setDisplay(clicked))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Team)
