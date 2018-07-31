@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { fetchTeam } from '../../thunks/fetchTeam';
 import { fetchLeague } from '../../thunks/fetchLeague';
 import { fetchSquad } from '../../thunks/fetchSquad';
-import * as key from '../../apiKeys';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
 import './todays-games.css'
 import { Game } from '../../components/Game/Game';
-import { currentTeam } from '../../actions/currentTeamAction';
+import { fetchGame } from '../../thunks/fetchGame';
+import FullGame from '../../components/FullGame/FullGame';
+import { setDisplay } from '../../actions/setDisplayAction';
+import Player from '../Player/Player';
 
 export class TodaysGames extends Component {
   constructor() {
@@ -25,12 +27,10 @@ export class TodaysGames extends Component {
       const gamesDisplay = games[league].map((game, index) => (
         <div>
           <Game 
-            {...game} 
+            {...game}
             fetchTeam={this.fetchTeam}
-            fetchSquad={this.fetchSquad} 
+            fetchSquad={this.fetchSquad}
             fetchGame={this.fetchGame}
-            currentTeam={this.currentTeam}
-            key={index}
           />
         </div>
       ))
@@ -49,9 +49,7 @@ export class TodaysGames extends Component {
 
   fetchTeam = (url) => {
     this.props.fetchTeam(url);
-    this.setState({
-      team: true,
-    });
+    this.props.setDisplay('team')
     this.props.history.push('/team');
   }
 
@@ -62,21 +60,30 @@ export class TodaysGames extends Component {
   fetchGame= (url) => {
     this.props.fetchGame(url);
     this.props.history.push('/game');
-  }
-
-  currentTeam = (id) => {
-    this.props.currentTeam(id)
+    this.props.setDisplay('game')
   }
 
   team = () => (<Team />)
 
   render() {
-    if (this.state.team) {
+    if (this.props.display === 'team') {
       return (
         <div className="team">
           <div className="display">
             {this.team()}
           </div>
+        </div>
+      )
+    } else if (this.props.display === 'game') {
+      return (
+        <div>
+          <FullGame />
+        </div>
+      )
+    } else if (this.props.display === 'player') {
+      return (
+        <div>
+          <Player />
         </div>
       )
     } else {
@@ -100,15 +107,18 @@ TodaysGames.propTypes = {
 export const mapStateToProps = (state) => ({
   liveScores: state.liveScores,
   id: state.currentTeam,
-  team: state.team[state.currentTeam],
-  squad: state.squad[state.currentTeam]
+  team: state.team,
+  squad: state.squad,
+  game: state.game,
+  display: state.display
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchTeam: (url) => dispatch(fetchTeam(url)),
   fetchSquad: (url) => dispatch(fetchSquad(url)),
   fetchLeague: (url) => dispatch(fetchLeague(url)),
-  currentTeam: (id) => dispatch(currentTeam(id))
+  fetchGame: (url) => dispatch(fetchGame(url)),
+  setDisplay: (clicked) => dispatch(setDisplay(clicked))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodaysGames);

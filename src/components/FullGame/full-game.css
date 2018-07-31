@@ -1,0 +1,32 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+}
+
+.game-header {
+  color: white;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 10% 30% 20% 30% 10%;
+}
+
+.logo {
+  height: 50px;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+}
+
+.event-img {
+  height: 20px;
+}
