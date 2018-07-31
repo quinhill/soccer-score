@@ -13,13 +13,6 @@ import { setDisplay } from '../../actions/setDisplayAction';
 import Player from '../Player/Player';
 
 export class TodaysGames extends Component {
-  constructor() {
-    super()
-    this.state = {
-      team: false,
-      game: false,
-    }
-  }
 
   displayGames = () => {
     const games = this.props.liveScores;
@@ -39,7 +32,7 @@ export class TodaysGames extends Component {
           key={index}
           className="league-div"
         >
-          <h1>{league}</h1>
+          <h1 className="league-name">{league}</h1>
           {gamesDisplay}
         </div>
       )
@@ -84,6 +77,14 @@ export class TodaysGames extends Component {
       return (
         <div>
           <Player />
+        </div>
+      )
+    } else if (this.props.display === 'home' || '') {
+      return (
+        <div className="todays-games">
+          <div className="display">
+            {this.displayGames()}
+          </div>
         </div>
       )
     } else {

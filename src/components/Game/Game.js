@@ -39,7 +39,7 @@ export class Game extends Component {
     } else if (!times.minute) {
       return (
         <button
-          className="details-button"
+          className="details-button button"
           onClick={this.getGame}
           id={this.props.id}
         >

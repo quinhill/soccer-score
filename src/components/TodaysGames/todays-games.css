@@ -6,10 +6,22 @@
 }
 
 .display {
-  background-color: #00C5B8;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.league-div {
+  background-color: #b5b5b7;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.6);
+}
+
+.league-name {
+  color: #16174f;
+  margin: 10px;
 }

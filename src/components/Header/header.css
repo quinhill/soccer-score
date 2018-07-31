@@ -1,7 +1,7 @@
 .logo {
   padding: 20px;
   font-family: 'Audiowide', cursive;
-  color: #00C5B7;
+  color: #f2b632;
   font-size: 40px;
   text-decoration: none;
 }
@@ -33,7 +33,6 @@
   padding: 15px;
   color: #222222;
   border: none;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
 }
 
 .link:hover {

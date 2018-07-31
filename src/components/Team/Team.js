@@ -25,7 +25,7 @@ export class Team extends Component {
     return this.props.squad.map(player => {
       return (
         <div className="player">
-          <p>{player.number}</p>
+          <p className="player-number">{player.number}</p>
           <Link
             to='/player'
             className="player-link"
@@ -42,19 +42,17 @@ export class Team extends Component {
     return (
       <div className="team-container">
         <div className="team">
+          <img id="team-logo" src={this.props.team.logo} />
           <h1>{this.props.team.name}</h1>
-          <img src={this.props.team.logo} />
         </div>
         <div className="manager-stadium">
           <div className="manager-container">
-            <p className="manager">manager:</p>
-            <h3>{this.props.team.manager},</h3>
-            <h3>{this.props.team.nationality}</h3>
+            <h3 className="manager"><span>Manager:</span>{this.props.team.manager},</h3>
+            <h3 className="manager">{this.props.team.nationality}</h3>
           </div>
           <div className="stadium-container">
-            <p className="stadium">stadium:</p>
-            <p>{this.props.team.venue}</p>
-            <p>{this.props.team.capacity}</p>
+            <p className="stadium"><span>Stadium:</span>{this.props.team.venue}</p>
+            <p className="stadium"><span>Capacity:</span>{this.props.team.capacity}</p>
           </div>
         </div>
         <div className="players">

@@ -1,7 +1,15 @@
 .App {
   text-align: center;
-  background-image: url('../../assets/connectwork.png');
+  background-image: url('../../assets/stripes-light.png');
   min-height: 100vh;
   height: 100%;
+  width: 100%;
   font-family: 'Questrial', sans-serif;
+}
+
+.color-overlay{
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 14, 19, 0.66);
 }

@@ -15,6 +15,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="color-overlay">
         <Header />
         <Switch>
           <Route path='/' component={TodaysGames}/>
@@ -22,6 +23,7 @@ export class App extends Component {
           <Route exact path='/fullgame' component={FullGame}/>
           <Route exact path='/player' component={Player}/>
         </Switch>
+      </div>
       </div>
     );
   }

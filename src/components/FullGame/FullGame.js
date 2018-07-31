@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 export const FullGame = (props) => {
 
+  console.log(props)
+
   const reduceEvents = () => {
     if (props.game.goals) {
       const events = [
@@ -17,14 +19,32 @@ export const FullGame = (props) => {
   }
 
   const mapEvents = (events) => {
-    console.log(events)
     return events.map(event => {
-      return (
-        <div className="event">
-          <p>{event.player_name}</p>
-          <img className="event-img" src={`/${event.type}.png`} />
-        </div>
-      )
+      if (event.type === "subst") {
+        console.log(event)
+        return (
+          <div>
+
+          </div>
+        )
+      }
+      if (parseInt(event.team_id) === props.game.homeId) {
+        return (
+          <div className="event">
+            <img className="home-img" src={`/${event.type}.png`} />
+            <p className="home-name">{event.player_name}</p>
+            <p className="time">{`'${event.minute}`}</p>
+          </div>
+        )
+      } else {
+        return (
+          <div className="event">
+            <p className="time">{`'${event.minute}`}</p>
+            <p className="away-name">{event.player_name}</p>
+            <img className="away-img" src={`/${event.type}.png`} />
+          </div>
+        )
+      }
     })
   }
 
@@ -51,8 +71,10 @@ export const FullGame = (props) => {
           <img className="logo" src={props.game.awayLogo} />
         </div>
       </div>
-      <div className="events">
-        {reduceEvents()}
+      <div className="events-container">
+        <div className="events">
+          {reduceEvents()}
+        </div>
       </div>
     </div>
   )
