@@ -24,14 +24,7 @@ export class TodaysGames extends Component {
     return Object.keys(games).map((league, index) => {
       const gamesDisplay = games[league].map((game, index) => (
         <div>
-          <Game 
-            {...game} 
-            fetchTeam={this.fetchTeam}
-            fetchSquad={this.fetchSquad} 
-            fetchGame={this.fetchGame}
-            currentTeam={this.currentTeam}
-            key={index}
-          />
+          <Game />
         </div>
       ))
       return (

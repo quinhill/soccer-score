@@ -5,7 +5,9 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { fetchLiveScores } from '../../thunks/fetchLiveScores';
 import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
-import { Team } from '../Team/Team';
+import Team from '../Team/Team';
+import FullGame from '../FullGame/FullGame';
+import Player from '../Player/Player';
 import PropTypes from 'prop-types';
 
 export class App extends Component {
@@ -15,11 +17,10 @@ export class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route 
-            path='/' 
-            component={TodaysGames}
-          />
+          <Route path='/' component={TodaysGames}/>
           <Route exact path='/team' component={Team}/>
+          <Route exact path='/fullgame' component={FullGame}/>
+          <Route exact path='/player' component={Player}/>
         </Switch>
       </div>
     );

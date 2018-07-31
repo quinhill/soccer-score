@@ -1,48 +1,68 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './team.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { getPlayerUrl } from '../../apiKeys';
+import { fetchPlayer } from '../../thunks/fetchPlayer'
+import { Link } from 'react-router-dom';
 
-export const Team = (props) => {
-  const mappedPlayers =
-    props.squad.map(player => {
+export class Team extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      player: false
+    }
+  }
+
+  getPlayer = (id) => {
+    const url = getPlayerUrl(id)
+    this.props.fetchPlayer(url)
+    this.setState({player: true})
+  }
+
+  mappedPlayers = () => {
+    return this.props.squad.map(player => {
       return (
         <div className="player">
           <p>{player.number}</p>
-          <button
-            className="player-button"
-            id={player.id}
+          <Link
+            to='/player'
+            className="player-link"
+            onClick={() => this.getPlayer(player.id)}
           >
             {player.name}
-          </button>
+          </Link>
         </div>
       )
     })
+  }
 
-  return (
-    <div className="team-container">
-      <div className="team">
-        <h1>{props.team.name}</h1>
-        <img src={props.team.logo} />
-      </div>
-      <div className="manager-stadium">
-        <div className="manager-container">
-          <p className="manager">manager:</p>
-          <h3>{props.team.manager},</h3>
-          <h3>{props.team.nationality}</h3>
+  render () {
+    return (
+      <div className="team-container">
+        <div className="team">
+          <h1>{this.props.team.name}</h1>
+          <img src={this.props.team.logo} />
         </div>
-        <div className="stadium-container">
-          <p className="stadium">stadium:</p>
-          <p>{props.team.venue}</p>
-          <p>{props.team.capacity}</p>
+        <div className="manager-stadium">
+          <div className="manager-container">
+            <p className="manager">manager:</p>
+            <h3>{this.props.team.manager},</h3>
+            <h3>{this.props.team.nationality}</h3>
+          </div>
+          <div className="stadium-container">
+            <p className="stadium">stadium:</p>
+            <p>{this.props.team.venue}</p>
+            <p>{this.props.team.capacity}</p>
+          </div>
+        </div>
+        <div className="players">
+          <h3></h3>
+          {this.mappedPlayers()}
         </div>
       </div>
-      <div className="players">
-        <h3></h3>
-        {mappedPlayers}
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 Team.propTypes = {
@@ -55,4 +75,8 @@ export const mapStateToProps = state => ({
   squad: state.squad
 })
 
-export default connect(mapStateToProps)(Team)
+export const mapDispatchToProps = dispatch => ({
+  fetchPlayer: (url) => dispatch(fetchPlayer(url))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Team)

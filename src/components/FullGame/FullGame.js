@@ -22,7 +22,7 @@ export const FullGame = (props) => {
       return (
         <div className="event">
           <p>{event.player_name}</p>
-          <img src={`/${event.type}.png`} />
+          <img className="event-img" src={`/${event.type}.png`} />
         </div>
       )
     })
@@ -30,24 +30,26 @@ export const FullGame = (props) => {
 
   return (
     <div>
-      <div className="game-header">
-        <img src={props.game.homeLogo} />
-        <h1 
-          className="team-name"
-        >
-          {props.game.homeTeam}
-        </h1>
-        <h1 
-          className="score"
-        >
-          {`${props.game.homeScores}-${props.game.awayScores}`}
-        </h1>
-        <h1 
-          className="team-name"
-        >
-          {props.game.awayTeam}
-        </h1>
-        <img src={props.game.awayLogo} />
+      <div className="game-container">
+        <div className="game-header">
+          <img className="logo" src={props.game.homeLogo} />
+          <h1 
+            className="team-name"
+          >
+            {props.game.homeTeam}
+          </h1>
+          <h1 
+            className="score"
+          >
+            {`${props.game.homeScores}-${props.game.awayScores}`}
+          </h1>
+          <h1 
+            className="team-name"
+          >
+            {props.game.awayTeam}
+          </h1>
+          <img className="logo" src={props.game.awayLogo} />
+        </div>
       </div>
       <div className="events">
         {reduceEvents()}

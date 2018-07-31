@@ -3,6 +3,10 @@ import './game.css';
 import PropTypes from 'prop-types';
 import { getTeamUrl, getSquadUrl, getGameUrl } from '../../apiKeys';
 import { cleanTime } from './timeCleaner';
+import { fetchTeam } from '../../thunks/fetchTeam'
+import { fetchSquad } from '../../thunks/fetchSquad';
+import { fetchGame } from '../../thunks/fetchGame';
+import { connect } from 'react-redux';
 
 export class Game extends Component {
   constructor(props) {
@@ -16,7 +20,6 @@ export class Game extends Component {
     const squadUrl = getSquadUrl(seasonId, teamId);
     this.props.fetchTeam(teamUrl);
     this.props.fetchSquad(squadUrl);
-    this.props.currentTeam(teamId);
   }
 
   getGame = (event) => {
@@ -80,5 +83,20 @@ export class Game extends Component {
 }
 
 Game.propTypes = {
-  props: PropTypes.object
+  game: PropTypes.object,
+  fetchTeam: PropTypes.func,
+  fetchSquad: PropTypes.func,
+  fetchGame: PropTypes.func
 }
+
+export const mapStateToProps = state => ({
+  game: state.game
+});
+
+export const mapDispatchToProps = (dispatch) => ({
+  fetchTeam: (url) => dispatch(fetchTeam(url)),
+  fetchSquad: (url) => dispatch(fetchSquad(url)),
+  fetchGame: (url) => dispatch(fetchGame(url))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Game);
