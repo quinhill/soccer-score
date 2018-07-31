@@ -5,13 +5,8 @@
   justify-content: center;
 }
 
-.display {
-  width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.display-games {
+  width: 600px;
 }
 
 .league-div {

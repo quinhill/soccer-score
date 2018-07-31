@@ -90,7 +90,7 @@ export class TodaysGames extends Component {
     } else {
       return (
         <div className="todays-games">
-          <div className="display">
+          <div className="display-games">
             {this.displayGames()}
           </div>
         </div>

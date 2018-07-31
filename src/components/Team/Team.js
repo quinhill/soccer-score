@@ -40,24 +40,26 @@ export class Team extends Component {
 
   render () {
     return (
-      <div className="team-container">
-        <div className="team">
-          <img id="team-logo" src={this.props.team.logo} />
-          <h1>{this.props.team.name}</h1>
-        </div>
-        <div className="manager-stadium">
-          <div className="manager-container">
-            <h3 className="manager"><span>Manager:</span>{this.props.team.manager},</h3>
-            <h3 className="manager">{this.props.team.nationality}</h3>
+      <div className="container-container">
+        <div className="team-container">
+          <div className="team">
+            <img id="team-logo" src={this.props.team.logo} />
+            <h1 className="team-name">{this.props.team.name}</h1>
           </div>
-          <div className="stadium-container">
-            <p className="stadium"><span>Stadium:</span>{this.props.team.venue}</p>
-            <p className="stadium"><span>Capacity:</span>{this.props.team.capacity}</p>
+          <div className="manager-stadium">
+            <div className="manager-container">
+              <h3 className="manager"><span>Manager:</span>{this.props.team.manager},</h3>
+              <h3 className="manager">{this.props.team.nationality}</h3>
+            </div>
+            <div className="stadium-container">
+              <p className="stadium"><span>Stadium:</span>{this.props.team.venue}</p>
+              <p className="stadium"><span>Capacity:</span>{this.props.team.capacity}</p>
+            </div>
           </div>
-        </div>
-        <div className="players">
-          <h3></h3>
-          {this.mappedPlayers()}
+          <div className="players">
+            <h3></h3>
+            {this.mappedPlayers()}
+          </div>
         </div>
       </div>
     )
