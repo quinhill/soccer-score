@@ -4,6 +4,10 @@ import { cleanLive } from './liveCleaner';
 import { mockCleanLiveData, mockExpectedLive } from '../../__mocks__/mockCleanLiveData';
 import { cleanPlayer } from './playerCleaner';
 import { mockPlayerData, mockExpectedPlayer } from '../../__mocks__/mockPlayerCleaner';
+import { cleanSquad } from './squadCleaner';
+import { mockSquadData, mockExpectedSquad } from '../../__mocks__/mockSquadCleanerData';
+import { cleanTeam } from './teamCleaner';
+import { mockTeamData, mockExpectedTeam } from '../../__mocks__/mockCleanTeamData';
 
 describe('cleanGame', () => {
 
@@ -40,6 +44,20 @@ describe('cleanPlayer', () => {
 
 describe('cleanSquad', () => {
   it('should clean the squad data', () => {
-    
+    const expected = mockExpectedSquad;
+    const mockData = mockSquadData
+    const result = cleanSquad(mockData);
+
+    expect(result).toEqual(expected);
+  })
+})
+
+describe('cleanTeam', () => {
+  it('should clean the team data', () => {
+    const expected = mockExpectedTeam;
+    const mockData = mockTeamData;
+    const result = cleanTeam(mockData);
+
+    expect(result).toEqual(expected);
   })
 })
