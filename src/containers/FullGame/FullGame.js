@@ -1,12 +1,12 @@
 import React from 'react';
 import './full-game.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 export const FullGame = (props) => {
 
-  console.log(props)
-
   const reduceEvents = () => {
+    console.log(props)
     if (props.game.goals) {
       const events = [
         ...props.game.goals, ...props.game.cards, ...props.game.substitutions
@@ -21,7 +21,6 @@ export const FullGame = (props) => {
   const mapEvents = (events) => {
     return events.map(event => {
       if (event.type === "subst") {
-        console.log(event)
         return (
           <div>
 
@@ -78,6 +77,10 @@ export const FullGame = (props) => {
       </div>
     </div>
   )
+}
+
+FullGame.propTypes = {
+  game: PropTypes.object
 }
 
 export const mapStateToProps = (state) => ({

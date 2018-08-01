@@ -1,5 +1,5 @@
 .todays-games {
-  margin-top: 20px;
+  margin-top: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,6 +17,6 @@
 }
 
 .league-name {
-  color: #16174f;
+  color: #252839;
   margin: 10px;
 }

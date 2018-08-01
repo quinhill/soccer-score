@@ -32,7 +32,7 @@ export class App extends Component {
 App.propTypes = {
   isLoading: PropTypes.bool,
   hasErrored: PropTypes.bool,
-  fetchSchedule: PropTypes.func
+  fetchLiveScores: PropTypes.func
 }
 
 export const mapStateToProps = (state) => ({

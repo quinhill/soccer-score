@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import './todays-games.css'
 import { Game } from '../../components/Game/Game';
 import { fetchGame } from '../../thunks/fetchGame';
-import FullGame from '../../components/FullGame/FullGame';
+import FullGame from '../FullGame/FullGame';
 import { setDisplay } from '../../actions/setDisplayAction';
 import Player from '../Player/Player';
 

@@ -5,9 +5,6 @@ import { getTeamUrl, getSquadUrl, getGameUrl } from '../../apiKeys';
 import { cleanTime } from './timeCleaner';
 
 export class Game extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   handleClick = (event) => {
     const teamId = event.target.value;

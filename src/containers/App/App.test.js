@@ -2,7 +2,7 @@ import React from 'react';
 import { App } from './App';
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './App';
-import { fetchSchedule } from '../../thunks/fetchSchedule';
+import { fetchLiveScores } from '../../thunks/fetchLiveScores';
 
 
 describe('App', () => {
@@ -11,16 +11,13 @@ describe('App', () => {
 
     let initialState;
     let wrapper;
-    let mockFetchSchedule;
 
     beforeEach(() => {
-      mockFetchSchedule = jest.fn()
       initialState = {
         isLoading: false,
         hasErrored: false
       }
       wrapper = shallow(<App 
-        fetchSchedule={mockFetchSchedule}
         props={initialState}
         />)
     })
@@ -41,10 +38,9 @@ describe('App', () => {
     it('should call dispatch when using a function from MDTP', () => {
       const mockDispatch = jest.fn();
       const url = 'https://someString.com'
-      const actionToDispatch = fetchSchedule(url);
 
       const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.fetchSchedule(url);
+      mappedProps.fetchLiveScores(url);
       expect(mockDispatch).toHaveBeenCalled();
     })
   })
