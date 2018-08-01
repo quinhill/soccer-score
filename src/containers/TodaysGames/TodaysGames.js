@@ -106,7 +106,6 @@ TodaysGames.propTypes = {
 
 export const mapStateToProps = (state) => ({
   liveScores: state.liveScores,
-  id: state.currentTeam,
   team: state.team,
   squad: state.squad,
   game: state.game,
