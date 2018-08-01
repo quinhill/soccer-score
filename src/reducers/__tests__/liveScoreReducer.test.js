@@ -1,8 +1,8 @@
-import { game } from '../gameReducer';
+import { liveScores } from '../liveScoresReducer';
 
-describe('gameReducer', () => {
+describe('liveScoresReducer', () => {
   it('should return the initial state', () => {
-    const expected = {}
+    const expected = []
 
     const result = game(undefined, {})
 
@@ -13,7 +13,7 @@ describe('gameReducer', () => {
     const expected = { data: 'gameData' };
     const action = {
       type: 'FETCH_GAME_SUCCESS',
-      game: {data: 'gameData'}
+      game: { data: 'gameData' }
     }
 
     const result = game(undefined, action)
