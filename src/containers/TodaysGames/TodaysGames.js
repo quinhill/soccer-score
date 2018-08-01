@@ -99,9 +99,15 @@ export class TodaysGames extends Component {
 }
 
 TodaysGames.propTypes = {
-  schedule: PropTypes.array,
+  liveScores: PropTypes.array,
+  squad: PropTypes.array,
   team: PropTypes.object,
-  fetchTeam: PropTypes.func
+  game: PropTypes.object,
+  display: PropTypes.string,
+  fetchTeam: PropTypes.func,
+  fetchSquad: PropTypes.func,
+  fetchGame: PropTypes.func,
+  setDisplay: PropTypes.func,
 }
 
 export const mapStateToProps = (state) => ({
