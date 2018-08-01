@@ -51,8 +51,8 @@ export class TodaysGames extends Component {
 
   fetchGame= (url) => {
     this.props.fetchGame(url);
-    this.props.history.push('/game');
     this.props.setDisplay('game')
+    this.props.history.push('/game');
   }
 
   team = () => (<Team />)

@@ -4,6 +4,64 @@ import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './TodaysGames';
 
 describe('TodaysGames', () => {
+  let mockFetchTeam;
+  let mockFetchSquad;
+  let mockFetchGame;
+  let mockSetDisplay;
+  let mockLiveScores;
+  let mockTeam;
+  let mockSquad;
+  let mockGame;
+  let mockDisplay;
+  let mockHistory;
+  let wrapper;
+
+  beforeEach(() => {
+    mockFetchTeam = jest.fn();
+    mockFetchSquad = jest.fn();
+    mockFetchGame = jest.fn();
+    mockSetDisplay = jest.fn();
+    mockLiveScores = [{}, {}];
+    mockTeam = {}
+    mockSquad = [{}, {}];
+    mockGame = {};
+    mockDisplay = 'game';
+    mockHistory = [];
+    wrapper = shallow(<TodaysGames 
+      fetchTeam={mockFetchTeam}
+      fetchSquad={mockFetchSquad}
+      fetchGame={mockFetchGame}
+      setDisplay={mockSetDisplay}
+      liveScores={mockLiveScores}
+      team={mockTeam}
+      squad={mockSquad}
+      game={mockGame}
+      display={mockDisplay}
+      history={mockHistory}
+    />)
+  })
+
+  it('should call fetchTeam when fetchTeam is called', () => {
+    wrapper.instance().fetchTeam('www.team.com')
+
+    expect(mockFetchTeam).toHaveBeenCalled()
+  })
+
+  it('should call fetchSquad when fetchSquad is called', () => {
+    wrapper.instance().fetchSquad('www.team.com')
+
+    expect(mockFetchSquad).toHaveBeenCalled()
+  })
+
+  it('should call fetchGame when fetchGame is called', () => {
+    wrapper.instance().fetchGame('www.team.com')
+
+    expect(mockFetchGame).toHaveBeenCalled()
+  })
+
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
 
   describe('mapPropsToState', () => {
     
