@@ -65,4 +65,4 @@ export const mockCleanLiveData = [{
 }
 ]
 
-export const mockExpected = { "International Champions Cup": [{ "id": 10321885, "league": "International Champions Cup", "scores": { "et_score": null, "ft_score": "2-1", "ht_score": "2-1", "localteam_pen_score": null, "localteam_score": 2, "visitorteam_pen_score": null, "visitorteam_score": 1 }, "seasonId": 12720, "teamAway": "Real Madrid", "teamAwayId": 3468, "teamHome": "Manchester United", "teamHomeId": 14, "times": undefined }] }
+export const mockExpectedLive = { "International Champions Cup": [{ "id": 10321885, "league": "International Champions Cup", "scores": { "et_score": null, "ft_score": "2-1", "ht_score": "2-1", "localteam_pen_score": null, "localteam_score": 2, "visitorteam_pen_score": null, "visitorteam_score": 1 }, "seasonId": 12720, "teamAway": "Real Madrid", "teamAwayId": 3468, "teamHome": "Manchester United", "teamHomeId": 14, "times": undefined }] }

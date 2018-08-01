@@ -1,4 +1,5 @@
 export const cleanSquad = (squadData) => {
+  console.log(squadData)
   const squad = squadData.map((squadPlayer, index) => {
     return {
       key: index,
