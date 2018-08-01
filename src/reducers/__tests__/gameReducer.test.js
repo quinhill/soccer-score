@@ -11,9 +11,9 @@ describe('displayReducer', () => {
 
   it('should return a state with a string', () => {
     const expected = 'game';
-    const action = { 
+    const action = {
       type: 'SET_DISPLAY',
-      clicked: 'game' 
+      clicked: 'game'
     }
 
     const result = displayReducer(undefined, action)
