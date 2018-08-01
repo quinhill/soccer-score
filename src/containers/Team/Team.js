@@ -67,8 +67,10 @@ export class Team extends Component {
 }
 
 Team.propTypes = {
+  team: PropTypes.object,
   squad: PropTypes.array,
-  team: PropTypes.object
+  fetchPlayer: PropTypes.func,
+  setDisplay: PropTypes.func
 }
 
 export const mapStateToProps = state => ({

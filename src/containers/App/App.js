@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import { Route, Switch, withRouter } from 'react-router-dom';
-import { fetchLiveScores } from '../../thunks/fetchLiveScores';
+import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import TodaysGames from '../TodaysGames/TodaysGames';
 import Team from '../Team/Team';
@@ -35,13 +33,4 @@ App.propTypes = {
   fetchLiveScores: PropTypes.func
 }
 
-export const mapStateToProps = (state) => ({
-  isLoading: state.isLoading,
-  hasErrored: state.hasErrored
-});
-
-export const mapDispatchToProps = (dispatch) => ({
-  fetchLiveScores: (url) => dispatch(fetchLiveScores(url))
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default App;

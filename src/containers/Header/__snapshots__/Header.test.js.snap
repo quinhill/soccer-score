@@ -5,7 +5,15 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
-    fetchSchedule={[Function]}
+    fetchLeague={[Function]}
+    fetchLiveScores={[Function]}
+    liveScores={
+        Array [
+            Object {},
+            Object {},
+          ]
+    }
+    setDisplay={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,52 +27,37 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <Link
+        className="logo-link"
+        onClick={[Function]}
+        replace={false}
+        to="/"
+>
         <h1
+                className="logo"
+        >
+                soccer-scores
+        </h1>
+</Link>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <h1
           className="logo"
 >
           soccer-scores
 </h1>,
-        <div
-          className="nav-container"
->
-          <div
-                    className="nav"
-          >
-                    <NavLink
-                              activeClassName="active"
-                              aria-current="page"
-                              className="leagues-link link"
-                              onClick={[Function]}
-                              to="/leagues"
-                    >
-                              leagues
-                    </NavLink>
-                    <NavLink
-                              activeClassName="active"
-                              aria-current="page"
-                              className="games-link link"
-                              onClick={[Function]}
-                              to="/todaysgames"
-                    >
-                              today's games
-                    </NavLink>
-                    <NavLink
-                              activeClassName="active"
-                              aria-current="page"
-                              className="live-link link"
-                              onClick={[Function]}
-                              to="/live"
-                    >
-                              live
-                    </NavLink>
-          </div>
-</div>,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
+        "className": "logo-link",
+        "onClick": [Function],
+        "replace": false,
+        "to": "/",
+      },
+      "ref": null,
+      "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -76,137 +69,8 @@ ShallowWrapper {
         "rendered": "soccer-scores",
         "type": "h1",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="nav"
->
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="leagues-link link"
-                        onClick={[Function]}
-                        to="/leagues"
-            >
-                        leagues
-            </NavLink>
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="games-link link"
-                        onClick={[Function]}
-                        to="/todaysgames"
-            >
-                        today's games
-            </NavLink>
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="live-link link"
-                        onClick={[Function]}
-                        to="/live"
-            >
-                        live
-            </NavLink>
-</div>,
-          "className": "nav-container",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="leagues-link link"
-                onClick={[Function]}
-                to="/leagues"
->
-                leagues
-</NavLink>,
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="games-link link"
-                onClick={[Function]}
-                to="/todaysgames"
->
-                today's games
-</NavLink>,
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="live-link link"
-                onClick={[Function]}
-                to="/live"
->
-                live
-</NavLink>,
-            ],
-            "className": "nav",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": "leagues",
-                "className": "leagues-link link",
-                "onClick": [Function],
-                "to": "/leagues",
-              },
-              "ref": null,
-              "rendered": "leagues",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": "today's games",
-                "className": "games-link link",
-                "onClick": [Function],
-                "to": "/todaysgames",
-              },
-              "ref": null,
-              "rendered": "today's games",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": "live",
-                "className": "live-link link",
-                "onClick": [Function],
-                "to": "/live",
-              },
-              "ref": null,
-              "rendered": "live",
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-        "type": "div",
-      },
-    ],
+      "type": [Function],
+    },
     "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -215,52 +79,37 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
+        "children": <Link
+          className="logo-link"
+          onClick={[Function]}
+          replace={false}
+          to="/"
+>
           <h1
+                    className="logo"
+          >
+                    soccer-scores
+          </h1>
+</Link>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <h1
             className="logo"
 >
             soccer-scores
 </h1>,
-          <div
-            className="nav-container"
->
-            <div
-                        className="nav"
-            >
-                        <NavLink
-                                    activeClassName="active"
-                                    aria-current="page"
-                                    className="leagues-link link"
-                                    onClick={[Function]}
-                                    to="/leagues"
-                        >
-                                    leagues
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    aria-current="page"
-                                    className="games-link link"
-                                    onClick={[Function]}
-                                    to="/todaysgames"
-                        >
-                                    today's games
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    aria-current="page"
-                                    className="live-link link"
-                                    onClick={[Function]}
-                                    to="/live"
-                        >
-                                    live
-                        </NavLink>
-            </div>
-</div>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
+          "className": "logo-link",
+          "onClick": [Function],
+          "replace": false,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
@@ -272,137 +121,8 @@ ShallowWrapper {
           "rendered": "soccer-scores",
           "type": "h1",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
-              className="nav"
->
-              <NavLink
-                            activeClassName="active"
-                            aria-current="page"
-                            className="leagues-link link"
-                            onClick={[Function]}
-                            to="/leagues"
-              >
-                            leagues
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            aria-current="page"
-                            className="games-link link"
-                            onClick={[Function]}
-                            to="/todaysgames"
-              >
-                            today's games
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            aria-current="page"
-                            className="live-link link"
-                            onClick={[Function]}
-                            to="/live"
-              >
-                            live
-              </NavLink>
-</div>,
-            "className": "nav-container",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="leagues-link link"
-                  onClick={[Function]}
-                  to="/leagues"
->
-                  leagues
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="games-link link"
-                  onClick={[Function]}
-                  to="/todaysgames"
->
-                  today's games
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="live-link link"
-                  onClick={[Function]}
-                  to="/live"
->
-                  live
-</NavLink>,
-              ],
-              "className": "nav",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "aria-current": "page",
-                  "children": "leagues",
-                  "className": "leagues-link link",
-                  "onClick": [Function],
-                  "to": "/leagues",
-                },
-                "ref": null,
-                "rendered": "leagues",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "aria-current": "page",
-                  "children": "today's games",
-                  "className": "games-link link",
-                  "onClick": [Function],
-                  "to": "/todaysgames",
-                },
-                "ref": null,
-                "rendered": "today's games",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "aria-current": "page",
-                  "children": "live",
-                  "className": "live-link link",
-                  "onClick": [Function],
-                  "to": "/live",
-                },
-                "ref": null,
-                "rendered": "live",
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-          "type": "div",
-        },
-      ],
+        "type": [Function],
+      },
       "type": "header",
     },
   ],

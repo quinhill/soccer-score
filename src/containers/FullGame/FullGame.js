@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 export const FullGame = (props) => {
 
   const reduceEvents = () => {
-    console.log(props)
     if (props.game.goals) {
       const events = [
         ...props.game.goals, ...props.game.cards, ...props.game.substitutions

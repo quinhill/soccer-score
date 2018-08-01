@@ -2,32 +2,33 @@ import React from 'react';
 import { FullGame } from './FullGame';
 import { shallow } from 'enzyme';
 import { mapStateToProps } from './FullGame';
+import { mockFullGame } from '../../__mocks__/fullGameMocks';
 
 
 describe('FullGame', () => {
 
   describe('mapStateToProps', () => {
 
-    let initialState;
-    let wrapper;
-
-    beforeEach(() => {
-      initialState = {
-        game: {id: 'game'}
-      }
-      wrapper = shallow(<FullGame
-        props={initialState}
-      />)
-    })
-
     it('should return a props object', () => {
+      const mockState = {
+        game: mockFullGame,
+        team: {id: 'teamId'}
+      }
       const expected = {
-        game: {id: 'game'}
+        game: mockFullGame
       }
 
-      const result = mapStateToProps(initialState)
+      const mappedProps = mapStateToProps(mockState)
 
-      expect(result).toEqual(expected);
+      expect(mappedProps).toEqual(expected);
     })
+  })
+
+  it('should match snapshot', () => {
+    const mockProps = mockFullGame;
+    const wrapper = shallow(<FullGame 
+        game={{...mockProps}}
+    />)
+    expect(wrapper).toMatchSnapshot()
   })
 })

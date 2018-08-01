@@ -2,7 +2,6 @@ import React from 'react';
 import { App } from './App';
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './App';
-import { fetchLiveScores } from '../../thunks/fetchLiveScores';
 
 
 describe('App', () => {

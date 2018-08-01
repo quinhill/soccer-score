@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchLiveScores } from '../../thunks/fetchLiveScores';
-import { fetchLeague } from '../../thunks/fetchLeague';
 import './header.css';
 import { connect } from 'react-redux';
 import * as key from '../../apiKeys';
@@ -12,10 +11,6 @@ import { setDisplay } from '../../actions/setDisplayAction';
 export class Header extends Component {
 
   componentDidMount() {
-    this.handleLiveFetch()
-  }
-
-  handleLiveFetch = () => {
     this.props.fetchLiveScores(key.getFixtures);
   }
 
@@ -37,7 +32,10 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  fetchLiveScores: PropTypes.func
+  liveScores: PropTypes.array,
+  fetchLiveScores: PropTypes.func,
+  fetchLeague: PropTypes.func,
+  setDisplay: PropTypes.func
 }
 
 export const mapStateToProps = (state) => ({
@@ -46,7 +44,6 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchLiveScores: (url) => dispatch(fetchLiveScores(url)),
-  fetchLeague: (url) => dispatch(fetchLeague(url)),
   setDisplay: (clicked) => dispatch(setDisplay(clicked))
 });
 

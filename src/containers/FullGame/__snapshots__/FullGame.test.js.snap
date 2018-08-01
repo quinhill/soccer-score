@@ -1,0 +1,1636 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullGame should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    game={
+        Object {
+            "awayId": 3468,
+            "awayLogo": "https://cdn.sportmonks.com/images/soccer/teams/12/3468.png",
+            "awayScores": 1,
+            "awayTeam": "Real Madrid",
+            "cards": Array [],
+            "formations": Object {
+              "localteam_formation": null,
+              "visitorteam_formation": null,
+            },
+            "goals": Array [
+              Object {
+                "extra_minute": null,
+                "fixture_id": 10321885,
+                "id": 10321885001,
+                "minute": 18,
+                "player_assist_id": 933,
+                "player_assist_name": "M. Darmian",
+                "player_id": 1300,
+                "player_name": "A. Sánchez",
+                "reason": "Shot",
+                "result": "1-0",
+                "team_id": "14",
+                "type": "goal",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885002,
+                "player_id": 824,
+                "team_id": "14",
+                "type": "goal",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885003,
+                "player_id": 93948,
+                "team_id": "3468",
+                "type": "goal",
+              },
+            ],
+            "homeId": 14,
+            "homeLogo": "https://cdn.sportmonks.com/images/soccer/teams/14/14.png",
+            "homeScores": 2,
+            "homeTeam": "Manchester United",
+            "startingAt": Object {
+              "date": "2018-08-01",
+              "date_time": "2018-08-01 00:00:00",
+              "time": "00:00:00",
+              "timestamp": 1533081600,
+              "timezone": "UTC",
+            },
+            "substitutions": Array [
+              Object {
+                "extra_minute": null,
+                "fixture_id": 10321885,
+                "id": 10321885011,
+                "injuried": null,
+                "minute": 68,
+                "player_in_id": 4391,
+                "player_in_name": "A. Tuanzebe",
+                "player_out_id": 205411,
+                "player_out_name": "Fred",
+                "team_id": "14",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885006,
+                "player_in_id": 26823,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885013,
+                "player_in_id": 30289,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885005,
+                "player_in_id": 32744,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885012,
+                "player_in_id": 185972,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885014,
+                "player_in_id": 186353,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885008,
+                "player_in_id": 186560,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885009,
+                "player_in_id": 186560,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885015,
+                "player_in_id": 186668,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885004,
+                "player_in_id": 205983,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885007,
+                "player_in_id": 380886,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885010,
+                "player_in_id": 537208,
+                "team_id": "3468",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885016,
+                "player_in_id": 546780,
+                "team_id": "14",
+                "type": "subst",
+              },
+              Object {
+                "fixture_id": 10321885,
+                "id": 10321885017,
+                "player_in_id": 4536524,
+                "team_id": "14",
+                "type": "subst",
+              },
+            ],
+            "time": Object {
+              "added_time": null,
+              "extra_minute": null,
+              "injury_time": 3,
+              "minute": 90,
+              "second": null,
+              "starting_at": Object {
+                "status": "FT",
+              },
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="game-container"
+>
+          <div
+                    className="game-header"
+          >
+                    <img
+                              className="logo"
+                              src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+                    />
+                    <h1
+                              className="team-name"
+                    >
+                              Manchester United
+                    </h1>
+                    <h1
+                              className="score"
+                    >
+                              2-1
+                    </h1>
+                    <h1
+                              className="team-name"
+                    >
+                              Real Madrid
+                    </h1>
+                    <img
+                              className="logo"
+                              src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+                    />
+          </div>
+</div>,
+        <div
+          className="events-container"
+>
+          <div
+                    className="events"
+          >
+                    <div
+                              className="event"
+                    >
+                              <img
+                                        className="home-img"
+                                        src="/goal.png"
+                              />
+                              <p
+                                        className="home-name"
+                              >
+                                        A. Sánchez
+                              </p>
+                              <p
+                                        className="time"
+                              >
+                                        '18
+                              </p>
+                    </div>
+                    <div />
+                    <div
+                              className="event"
+                    >
+                              <p
+                                        className="time"
+                              >
+                                        'undefined
+                              </p>
+                              <p
+                                        className="away-name"
+                              />
+                              <img
+                                        className="away-img"
+                                        src="/goal.png"
+                              />
+                    </div>
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div
+                              className="event"
+                    >
+                              <img
+                                        className="home-img"
+                                        src="/goal.png"
+                              />
+                              <p
+                                        className="home-name"
+                              />
+                              <p
+                                        className="time"
+                              >
+                                        'undefined
+                              </p>
+                    </div>
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+          </div>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="game-header"
+>
+            <img
+                        className="logo"
+                        src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+            />
+            <h1
+                        className="team-name"
+            >
+                        Manchester United
+            </h1>
+            <h1
+                        className="score"
+            >
+                        2-1
+            </h1>
+            <h1
+                        className="team-name"
+            >
+                        Real Madrid
+            </h1>
+            <img
+                        className="logo"
+                        src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+            />
+</div>,
+          "className": "game-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                className="logo"
+                src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+/>,
+              <h1
+                className="team-name"
+>
+                Manchester United
+</h1>,
+              <h1
+                className="score"
+>
+                2-1
+</h1>,
+              <h1
+                className="team-name"
+>
+                Real Madrid
+</h1>,
+              <img
+                className="logo"
+                src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+/>,
+            ],
+            "className": "game-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "logo",
+                "src": "https://cdn.sportmonks.com/images/soccer/teams/14/14.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Manchester United",
+                "className": "team-name",
+              },
+              "ref": null,
+              "rendered": "Manchester United",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "2-1",
+                "className": "score",
+              },
+              "ref": null,
+              "rendered": "2-1",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Real Madrid",
+                "className": "team-name",
+              },
+              "ref": null,
+              "rendered": "Real Madrid",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "logo",
+                "src": "https://cdn.sportmonks.com/images/soccer/teams/12/3468.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="events"
+>
+            <div
+                        className="event"
+            >
+                        <img
+                                    className="home-img"
+                                    src="/goal.png"
+                        />
+                        <p
+                                    className="home-name"
+                        >
+                                    A. Sánchez
+                        </p>
+                        <p
+                                    className="time"
+                        >
+                                    '18
+                        </p>
+            </div>
+            <div />
+            <div
+                        className="event"
+            >
+                        <p
+                                    className="time"
+                        >
+                                    'undefined
+                        </p>
+                        <p
+                                    className="away-name"
+                        />
+                        <img
+                                    className="away-img"
+                                    src="/goal.png"
+                        />
+            </div>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div
+                        className="event"
+            >
+                        <img
+                                    className="home-img"
+                                    src="/goal.png"
+                        />
+                        <p
+                                    className="home-name"
+                        />
+                        <p
+                                    className="time"
+                        >
+                                    'undefined
+                        </p>
+            </div>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+</div>,
+          "className": "events-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="event"
+>
+                <img
+                                className="home-img"
+                                src="/goal.png"
+                />
+                <p
+                                className="home-name"
+                >
+                                A. Sánchez
+                </p>
+                <p
+                                className="time"
+                >
+                                '18
+                </p>
+</div>,
+              <div />,
+              <div
+                className="event"
+>
+                <p
+                                className="time"
+                >
+                                'undefined
+                </p>
+                <p
+                                className="away-name"
+                />
+                <img
+                                className="away-img"
+                                src="/goal.png"
+                />
+</div>,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div
+                className="event"
+>
+                <img
+                                className="home-img"
+                                src="/goal.png"
+                />
+                <p
+                                className="home-name"
+                />
+                <p
+                                className="time"
+                >
+                                'undefined
+                </p>
+</div>,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+              <div />,
+            ],
+            "className": "events",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="home-img"
+                    src="/goal.png"
+/>,
+                  <p
+                    className="home-name"
+>
+                    A. Sánchez
+</p>,
+                  <p
+                    className="time"
+>
+                    '18
+</p>,
+                ],
+                "className": "event",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "home-img",
+                    "src": "/goal.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "A. Sánchez",
+                    "className": "home-name",
+                  },
+                  "ref": null,
+                  "rendered": "A. Sánchez",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "'18",
+                    "className": "time",
+                  },
+                  "ref": null,
+                  "rendered": "'18",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="time"
+>
+                    'undefined
+</p>,
+                  <p
+                    className="away-name"
+/>,
+                  <img
+                    className="away-img"
+                    src="/goal.png"
+/>,
+                ],
+                "className": "event",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "'undefined",
+                    "className": "time",
+                  },
+                  "ref": null,
+                  "rendered": "'undefined",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "away-name",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "away-img",
+                    "src": "/goal.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="home-img"
+                    src="/goal.png"
+/>,
+                  <p
+                    className="home-name"
+/>,
+                  <p
+                    className="time"
+>
+                    'undefined
+</p>,
+                ],
+                "className": "event",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "home-img",
+                    "src": "/goal.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "home-name",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "'undefined",
+                    "className": "time",
+                  },
+                  "ref": null,
+                  "rendered": "'undefined",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="game-container"
+>
+            <div
+                        className="game-header"
+            >
+                        <img
+                                    className="logo"
+                                    src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+                        />
+                        <h1
+                                    className="team-name"
+                        >
+                                    Manchester United
+                        </h1>
+                        <h1
+                                    className="score"
+                        >
+                                    2-1
+                        </h1>
+                        <h1
+                                    className="team-name"
+                        >
+                                    Real Madrid
+                        </h1>
+                        <img
+                                    className="logo"
+                                    src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+                        />
+            </div>
+</div>,
+          <div
+            className="events-container"
+>
+            <div
+                        className="events"
+            >
+                        <div
+                                    className="event"
+                        >
+                                    <img
+                                                className="home-img"
+                                                src="/goal.png"
+                                    />
+                                    <p
+                                                className="home-name"
+                                    >
+                                                A. Sánchez
+                                    </p>
+                                    <p
+                                                className="time"
+                                    >
+                                                '18
+                                    </p>
+                        </div>
+                        <div />
+                        <div
+                                    className="event"
+                        >
+                                    <p
+                                                className="time"
+                                    >
+                                                'undefined
+                                    </p>
+                                    <p
+                                                className="away-name"
+                                    />
+                                    <img
+                                                className="away-img"
+                                                src="/goal.png"
+                                    />
+                        </div>
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div
+                                    className="event"
+                        >
+                                    <img
+                                                className="home-img"
+                                                src="/goal.png"
+                                    />
+                                    <p
+                                                className="home-name"
+                                    />
+                                    <p
+                                                className="time"
+                                    >
+                                                'undefined
+                                    </p>
+                        </div>
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+            </div>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="game-header"
+>
+              <img
+                            className="logo"
+                            src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+              />
+              <h1
+                            className="team-name"
+              >
+                            Manchester United
+              </h1>
+              <h1
+                            className="score"
+              >
+                            2-1
+              </h1>
+              <h1
+                            className="team-name"
+              >
+                            Real Madrid
+              </h1>
+              <img
+                            className="logo"
+                            src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+              />
+</div>,
+            "className": "game-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  className="logo"
+                  src="https://cdn.sportmonks.com/images/soccer/teams/14/14.png"
+/>,
+                <h1
+                  className="team-name"
+>
+                  Manchester United
+</h1>,
+                <h1
+                  className="score"
+>
+                  2-1
+</h1>,
+                <h1
+                  className="team-name"
+>
+                  Real Madrid
+</h1>,
+                <img
+                  className="logo"
+                  src="https://cdn.sportmonks.com/images/soccer/teams/12/3468.png"
+/>,
+              ],
+              "className": "game-header",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "logo",
+                  "src": "https://cdn.sportmonks.com/images/soccer/teams/14/14.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Manchester United",
+                  "className": "team-name",
+                },
+                "ref": null,
+                "rendered": "Manchester United",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2-1",
+                  "className": "score",
+                },
+                "ref": null,
+                "rendered": "2-1",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Real Madrid",
+                  "className": "team-name",
+                },
+                "ref": null,
+                "rendered": "Real Madrid",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "logo",
+                  "src": "https://cdn.sportmonks.com/images/soccer/teams/12/3468.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="events"
+>
+              <div
+                            className="event"
+              >
+                            <img
+                                          className="home-img"
+                                          src="/goal.png"
+                            />
+                            <p
+                                          className="home-name"
+                            >
+                                          A. Sánchez
+                            </p>
+                            <p
+                                          className="time"
+                            >
+                                          '18
+                            </p>
+              </div>
+              <div />
+              <div
+                            className="event"
+              >
+                            <p
+                                          className="time"
+                            >
+                                          'undefined
+                            </p>
+                            <p
+                                          className="away-name"
+                            />
+                            <img
+                                          className="away-img"
+                                          src="/goal.png"
+                            />
+              </div>
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div
+                            className="event"
+              >
+                            <img
+                                          className="home-img"
+                                          src="/goal.png"
+                            />
+                            <p
+                                          className="home-name"
+                            />
+                            <p
+                                          className="time"
+                            >
+                                          'undefined
+                            </p>
+              </div>
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+</div>,
+            "className": "events-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="event"
+>
+                  <img
+                                    className="home-img"
+                                    src="/goal.png"
+                  />
+                  <p
+                                    className="home-name"
+                  >
+                                    A. Sánchez
+                  </p>
+                  <p
+                                    className="time"
+                  >
+                                    '18
+                  </p>
+</div>,
+                <div />,
+                <div
+                  className="event"
+>
+                  <p
+                                    className="time"
+                  >
+                                    'undefined
+                  </p>
+                  <p
+                                    className="away-name"
+                  />
+                  <img
+                                    className="away-img"
+                                    src="/goal.png"
+                  />
+</div>,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div
+                  className="event"
+>
+                  <img
+                                    className="home-img"
+                                    src="/goal.png"
+                  />
+                  <p
+                                    className="home-name"
+                  />
+                  <p
+                                    className="time"
+                  >
+                                    'undefined
+                  </p>
+</div>,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+                <div />,
+              ],
+              "className": "events",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="home-img"
+                      src="/goal.png"
+/>,
+                    <p
+                      className="home-name"
+>
+                      A. Sánchez
+</p>,
+                    <p
+                      className="time"
+>
+                      '18
+</p>,
+                  ],
+                  "className": "event",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "home-img",
+                      "src": "/goal.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "A. Sánchez",
+                      "className": "home-name",
+                    },
+                    "ref": null,
+                    "rendered": "A. Sánchez",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "'18",
+                      "className": "time",
+                    },
+                    "ref": null,
+                    "rendered": "'18",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="time"
+>
+                      'undefined
+</p>,
+                    <p
+                      className="away-name"
+/>,
+                    <img
+                      className="away-img"
+                      src="/goal.png"
+/>,
+                  ],
+                  "className": "event",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "'undefined",
+                      "className": "time",
+                    },
+                    "ref": null,
+                    "rendered": "'undefined",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "away-name",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "away-img",
+                      "src": "/goal.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="home-img"
+                      src="/goal.png"
+/>,
+                    <p
+                      className="home-name"
+/>,
+                    <p
+                      className="time"
+>
+                      'undefined
+</p>,
+                  ],
+                  "className": "event",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "home-img",
+                      "src": "/goal.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "home-name",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "'undefined",
+                      "className": "time",
+                    },
+                    "ref": null,
+                    "rendered": "'undefined",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

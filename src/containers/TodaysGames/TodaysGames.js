@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTeam } from '../../thunks/fetchTeam';
-import { fetchLeague } from '../../thunks/fetchLeague';
 import { fetchSquad } from '../../thunks/fetchSquad';
 import Team from '../Team/Team';
 import PropTypes from 'prop-types';
@@ -117,7 +116,6 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   fetchTeam: (url) => dispatch(fetchTeam(url)),
   fetchSquad: (url) => dispatch(fetchSquad(url)),
-  fetchLeague: (url) => dispatch(fetchLeague(url)),
   fetchGame: (url) => dispatch(fetchGame(url)),
   setDisplay: (clicked) => dispatch(setDisplay(clicked))
 });
