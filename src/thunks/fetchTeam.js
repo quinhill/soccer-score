@@ -1,19 +1,21 @@
-import * as action from '../actions/fetchTeamAction';
+import { fetchTeamSuccess } from '../actions/fetchTeamAction';
+import { isLoading } from '../actions/isLoadingAction';
+import { hasErrored } from '../actions/hasErroredAction';
 import { cleanTeam } from './cleaners/teamCleaner';
 
 export const fetchTeam = (url) => {
   return (dispatch) => {
-    dispatch(action.isLoading(true))
+    dispatch(isLoading(true))
     fetch(url)
       .then(response => {
         if (!response.ok) {
           throw Error(response.statusText)
         }
-        dispatch(action.isLoading(false))
+        dispatch(isLoading(false))
         return response
       })
       .then(response => response.json())
-      .then(team => dispatch(action.fetchTeamSuccess(cleanTeam(team.data))))
-      .catch(() => dispatch(action.hasErrored(true)))
+      .then(team => dispatch(fetchTeamSuccess(cleanTeam(team.data))))
+      .catch(() => dispatch(hasErrored(true)))
   }
 }

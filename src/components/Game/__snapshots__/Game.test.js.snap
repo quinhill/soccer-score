@@ -1,3 +1,226 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Game handleClick should match snapshot 1`] = `undefined`;
+exports[`Game handleClick should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Game
+    fetchGame={[Function]}
+    fetchSquad={[Function]}
+    fetchTeam={[Function]}
+    id={10344115}
+    league="Copa MX"
+    scores={
+        Object {
+            "et_score": null,
+            "ft_score": "3-0",
+            "ht_score": "1-0",
+            "localteam_pen_score": null,
+            "localteam_score": 3,
+            "visitorteam_pen_score": null,
+            "visitorteam_score": 0,
+          }
+    }
+    seasonId={13012}
+    teamAway="Veracruz"
+    teamAwayId={2683}
+    teamHome="América"
+    teamHomeId={2687}
+    times={
+        Object {
+            "added_time": 0,
+            "extra_minute": null,
+            "injury_time": null,
+            "minute": 90,
+            "second": null,
+            "starting_at": Object {
+              "date": "2018-08-01",
+              "date_time": "2018-08-01 00:00:00",
+              "status": "FT",
+              "time": "00:00:00",
+              "timestamp": 1533081600,
+              "timezone": "UTC",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="button team-one"
+          id={13012}
+          onClick={[Function]}
+          value={2687}
+>
+          América
+</button>,
+        <button
+          className="details-button"
+          id={10344115}
+          onClick={[Function]}
+>
+          3-0
+</button>,
+        <button
+          className="button team-two"
+          id={13012}
+          onClick={[Function]}
+          value={2683}
+>
+          Veracruz
+</button>,
+      ],
+      "className": "game",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "América",
+          "className": "button team-one",
+          "id": 13012,
+          "onClick": [Function],
+          "value": 2687,
+        },
+        "ref": null,
+        "rendered": "América",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "3-0",
+          "className": "details-button",
+          "id": 10344115,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "3-0",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Veracruz",
+          "className": "button team-two",
+          "id": 13012,
+          "onClick": [Function],
+          "value": 2683,
+        },
+        "ref": null,
+        "rendered": "Veracruz",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="button team-one"
+            id={13012}
+            onClick={[Function]}
+            value={2687}
+>
+            América
+</button>,
+          <button
+            className="details-button"
+            id={10344115}
+            onClick={[Function]}
+>
+            3-0
+</button>,
+          <button
+            className="button team-two"
+            id={13012}
+            onClick={[Function]}
+            value={2683}
+>
+            Veracruz
+</button>,
+        ],
+        "className": "game",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "América",
+            "className": "button team-one",
+            "id": 13012,
+            "onClick": [Function],
+            "value": 2687,
+          },
+          "ref": null,
+          "rendered": "América",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "3-0",
+            "className": "details-button",
+            "id": 10344115,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "3-0",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Veracruz",
+            "className": "button team-two",
+            "id": 13012,
+            "onClick": [Function],
+            "value": 2683,
+          },
+          "ref": null,
+          "rendered": "Veracruz",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

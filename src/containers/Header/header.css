@@ -1,0 +1,53 @@
+.logo {
+  padding: 20px;
+  font-family: 'Audiowide', cursive;
+  color: #f2b632;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: grid;
+  grid-template-columns: 30% 30% 30%;
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.link {
+  text-decoration: none;
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  color: #222222;
+  border: none;
+}
+
+.link:hover {
+  border: 2px solid #00C5B8;
+  box-shadow: 0px 2px 10px 0px rgba(0, 197, 184);
+}
+
+.leagues-link {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #222222;
+}
+
+.live-link {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #222222;
+}

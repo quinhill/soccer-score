@@ -1,17 +1,18 @@
 p {
-  color: white;
   margin-left: 10px;
 }
 
 .game {
   display: grid;
-  grid-template-columns: 35% 30% 35%;
-  margin: 0 20px 0 20px;
-  border-bottom: 1px solid white;
+  grid-template-columns: 40% 20% 40%;
+  margin: 5px 0 5px 0;
+  width: 100%;
+  border-bottom: 1px solid #b5b5b7;
+  background-color: #252839;
 }
 
-.game:last-child {
-  border: none;
+.team-name {
+  color: #252839;
 }
 
 .button {
@@ -20,9 +21,22 @@ p {
   color: white;
   font-family: 'Questrial', sans-serif;
   font-size: 16px;
-  width: 200px;
+  text-align: center;
+  width: 100%;
 }
 
 .button:hover {
-  color: #249CD0;
+  color: #f2b632;
+  ;
+}
+
+.details-button {
+  border: none;
+  font-size: 16px;
+  color: rgb(246, 241, 238);
+  background: none;
+}
+
+.details-button:hover {
+  color: #f2b632;
 }

@@ -1,0 +1,22 @@
+.todays-games {
+  margin-top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.display-games {
+  width: 600px;
+}
+
+.league-div {
+  background-color: #b5b5b7;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.6);
+}
+
+.league-name {
+  color: #252839;
+  margin: 10px;
+}

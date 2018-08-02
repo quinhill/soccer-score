@@ -1,0 +1,771 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    player={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="player-container"
+>
+        <div
+                className="name-image-container"
+        >
+                <h1
+                        className="player-name"
+                />
+                <img
+                        className="player-image"
+                        src={undefined}
+                />
+        </div>
+        <div
+                className="other-info-container"
+        >
+                <p
+                        className="other-info"
+                >
+                        <span>
+                                Nationality:
+                        </span>
+                </p>
+                <p
+                        className="other-info"
+                >
+                        <span>
+                                Date of Birth:
+                        </span>
+                </p>
+                <p
+                        className="other-info"
+                >
+                        <span>
+                                Birth Place:
+                        </span>
+                </p>
+                <p
+                        className="other-info"
+                >
+                        <span>
+                                Club:
+                        </span>
+                </p>
+                <p
+                        className="other-info"
+                >
+                        <span>
+                                Position:
+                        </span>
+                </p>
+        </div>
+</div>,
+      "className": "container-container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="name-image-container"
+>
+            <h1
+                        className="player-name"
+            />
+            <img
+                        className="player-image"
+                        src={undefined}
+            />
+</div>,
+          <div
+            className="other-info-container"
+>
+            <p
+                        className="other-info"
+            >
+                        <span>
+                                    Nationality:
+                        </span>
+            </p>
+            <p
+                        className="other-info"
+            >
+                        <span>
+                                    Date of Birth:
+                        </span>
+            </p>
+            <p
+                        className="other-info"
+            >
+                        <span>
+                                    Birth Place:
+                        </span>
+            </p>
+            <p
+                        className="other-info"
+            >
+                        <span>
+                                    Club:
+                        </span>
+            </p>
+            <p
+                        className="other-info"
+            >
+                        <span>
+                                    Position:
+                        </span>
+            </p>
+</div>,
+        ],
+        "className": "player-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="player-name"
+/>,
+              <img
+                className="player-image"
+                src={undefined}
+/>,
+            ],
+            "className": "name-image-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "player-name",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "player-image",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="other-info"
+>
+                <span>
+                                Nationality:
+                </span>
+</p>,
+              <p
+                className="other-info"
+>
+                <span>
+                                Date of Birth:
+                </span>
+</p>,
+              <p
+                className="other-info"
+>
+                <span>
+                                Birth Place:
+                </span>
+</p>,
+              <p
+                className="other-info"
+>
+                <span>
+                                Club:
+                </span>
+</p>,
+              <p
+                className="other-info"
+>
+                <span>
+                                Position:
+                </span>
+</p>,
+            ],
+            "className": "other-info-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Nationality:
+</span>,
+                  undefined,
+                ],
+                "className": "other-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Nationality:",
+                  },
+                  "ref": null,
+                  "rendered": "Nationality:",
+                  "type": "span",
+                },
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Date of Birth:
+</span>,
+                  undefined,
+                ],
+                "className": "other-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Date of Birth:",
+                  },
+                  "ref": null,
+                  "rendered": "Date of Birth:",
+                  "type": "span",
+                },
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Birth Place:
+</span>,
+                  undefined,
+                ],
+                "className": "other-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Birth Place:",
+                  },
+                  "ref": null,
+                  "rendered": "Birth Place:",
+                  "type": "span",
+                },
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Club:
+</span>,
+                  undefined,
+                ],
+                "className": "other-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Club:",
+                  },
+                  "ref": null,
+                  "rendered": "Club:",
+                  "type": "span",
+                },
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Position:
+</span>,
+                  undefined,
+                ],
+                "className": "other-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Position:",
+                  },
+                  "ref": null,
+                  "rendered": "Position:",
+                  "type": "span",
+                },
+                undefined,
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="player-container"
+>
+          <div
+                    className="name-image-container"
+          >
+                    <h1
+                              className="player-name"
+                    />
+                    <img
+                              className="player-image"
+                              src={undefined}
+                    />
+          </div>
+          <div
+                    className="other-info-container"
+          >
+                    <p
+                              className="other-info"
+                    >
+                              <span>
+                                        Nationality:
+                              </span>
+                    </p>
+                    <p
+                              className="other-info"
+                    >
+                              <span>
+                                        Date of Birth:
+                              </span>
+                    </p>
+                    <p
+                              className="other-info"
+                    >
+                              <span>
+                                        Birth Place:
+                              </span>
+                    </p>
+                    <p
+                              className="other-info"
+                    >
+                              <span>
+                                        Club:
+                              </span>
+                    </p>
+                    <p
+                              className="other-info"
+                    >
+                              <span>
+                                        Position:
+                              </span>
+                    </p>
+          </div>
+</div>,
+        "className": "container-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="name-image-container"
+>
+              <h1
+                            className="player-name"
+              />
+              <img
+                            className="player-image"
+                            src={undefined}
+              />
+</div>,
+            <div
+              className="other-info-container"
+>
+              <p
+                            className="other-info"
+              >
+                            <span>
+                                          Nationality:
+                            </span>
+              </p>
+              <p
+                            className="other-info"
+              >
+                            <span>
+                                          Date of Birth:
+                            </span>
+              </p>
+              <p
+                            className="other-info"
+              >
+                            <span>
+                                          Birth Place:
+                            </span>
+              </p>
+              <p
+                            className="other-info"
+              >
+                            <span>
+                                          Club:
+                            </span>
+              </p>
+              <p
+                            className="other-info"
+              >
+                            <span>
+                                          Position:
+                            </span>
+              </p>
+</div>,
+          ],
+          "className": "player-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="player-name"
+/>,
+                <img
+                  className="player-image"
+                  src={undefined}
+/>,
+              ],
+              "className": "name-image-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "player-name",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "player-image",
+                  "src": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="other-info"
+>
+                  <span>
+                                    Nationality:
+                  </span>
+</p>,
+                <p
+                  className="other-info"
+>
+                  <span>
+                                    Date of Birth:
+                  </span>
+</p>,
+                <p
+                  className="other-info"
+>
+                  <span>
+                                    Birth Place:
+                  </span>
+</p>,
+                <p
+                  className="other-info"
+>
+                  <span>
+                                    Club:
+                  </span>
+</p>,
+                <p
+                  className="other-info"
+>
+                  <span>
+                                    Position:
+                  </span>
+</p>,
+              ],
+              "className": "other-info-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Nationality:
+</span>,
+                    undefined,
+                  ],
+                  "className": "other-info",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Nationality:",
+                    },
+                    "ref": null,
+                    "rendered": "Nationality:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Date of Birth:
+</span>,
+                    undefined,
+                  ],
+                  "className": "other-info",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Date of Birth:",
+                    },
+                    "ref": null,
+                    "rendered": "Date of Birth:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Birth Place:
+</span>,
+                    undefined,
+                  ],
+                  "className": "other-info",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Birth Place:",
+                    },
+                    "ref": null,
+                    "rendered": "Birth Place:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Club:
+</span>,
+                    undefined,
+                  ],
+                  "className": "other-info",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Club:",
+                    },
+                    "ref": null,
+                    "rendered": "Club:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Position:
+</span>,
+                    undefined,
+                  ],
+                  "className": "other-info",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Position:",
+                    },
+                    "ref": null,
+                    "rendered": "Position:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

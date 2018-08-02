@@ -5,9 +5,6 @@ import { getTeamUrl, getSquadUrl, getGameUrl } from '../../apiKeys';
 import { cleanTime } from './timeCleaner';
 
 export class Game extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   handleClick = (event) => {
     const teamId = event.target.value;
@@ -39,7 +36,7 @@ export class Game extends Component {
     } else if (!times.minute) {
       return (
         <button
-          className="details-button"
+          className="details-button button"
           onClick={this.getGame}
           id={this.props.id}
         >
