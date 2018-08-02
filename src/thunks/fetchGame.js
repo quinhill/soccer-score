@@ -4,20 +4,21 @@ import { hasErrored } from  '../actions/hasErroredAction';
 import { cleanGame } from './cleaners/gameCleaner';
 
 export const fetchGame = (url) => {
-  return (dispatch) => {
-    dispatch(isLoading(true))
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw Error(response.statusText)
-        }
-        dispatch(isLoading(false))
-        return response
-      })
-      .then(response => {
-        return response.json()
-      })
-      .then(game => dispatch(fetchGameSuccess(cleanGame(game.data))))
-      .catch(() => dispatch(hasErrored(true)))
+  return async (dispatch) => {
+    try {
+      dispatch(isLoading(true))
+      const response = await fetch(url)
+      if (!response.ok) {
+        console.log(response)
+        throw Error(response.statusText)
+    }
+    dispatch(isLoading(false))
+    const result = await response.json()
+    console.log(result)
+    const cleanedGame = cleanGame(result.data)
+    dispatch(fetchGameSuccess(cleanedGame))
+    } catch (error) {
+      dispatch(hasErrored(true))
+    }
   }
 }
