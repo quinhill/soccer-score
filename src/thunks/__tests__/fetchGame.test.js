@@ -2,6 +2,8 @@ import { fetchGame } from '../fetchGame'
 import { isLoading } from '../../actions/isLoadingAction';
 import { hasErrored } from '../../actions/hasErroredAction';
 import { fetchGameSuccess } from '../../actions/fetchGameAction';
+import { mockGame } from '../../__mocks__/gameMocks'
+import { cleanGame } from '../cleaners/gameCleaner';
 
 describe('fetchGame', () => {
   let mockUrl
@@ -45,4 +47,19 @@ describe('fetchGame', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
   })
 
+
+  it('should dispatch fetchGame with the correct param', async () => {
+
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        mockGameClean
+      })
+    }))
+    const thunk = fetchGame(mockUrl)
+
+    await thunk(mockDispatch)
+
+    expect(mockDispatch).toHaveBeenCalledWith(fetchGameSuccess(mockGame))
+  })
 })
