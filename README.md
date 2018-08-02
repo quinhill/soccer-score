@@ -6,4 +6,7 @@ Soccer-Scores was built in React, using Redux and the Thunks middleware to handl
 
 The API used for Soccer-Scores is https://sportmonks.com/
 
+Developer: Quinlan Hill 
+https://www.linkedin.com/in/quinlan-hill/
+
 ![](https://media.giphy.com/media/9JisGgHdAdV0MwVZRM/giphy.gif)
